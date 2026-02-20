@@ -67,10 +67,10 @@
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Database schema with RLS (applications, zip_seats, email_log tables)
+- [x] **INFRA-01**: Database schema with RLS (applications, zip_seats, email_log tables)
 - [x] **INFRA-02**: Houston ZIP codes seeded with initial seat caps
 - [x] **INFRA-03**: Stripe webhook endpoint with signature verification
-- [ ] **INFRA-04**: Deployed to Vercel with environment variable management
+- [x] **INFRA-04**: Deployed to Vercel with environment variable management
 
 ## v2 Requirements
 
@@ -142,10 +142,10 @@
 | ADMIN-09 | Phase 6 | Pending |
 | ANLY-01 | Phase 6 | Pending |
 | ANLY-02 | Phase 6 | Pending |
-| INFRA-01 | Phase 1 | In Progress (DDL written, migration apply pending credentials) |
+| INFRA-01 | Phase 1 | Complete |
 | INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Complete |
-| INFRA-04 | Phase 1 | In Progress (env validation working, Vercel deploy pending credentials) |
+| INFRA-04 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 43 total
@@ -154,4 +154,4 @@
 
 ---
 *Requirements defined: 2026-02-19*
-*Last updated: 2026-02-20 after Plan 01-01 execution — INFRA-01 and INFRA-04 in progress*
+*Last updated: 2026-02-20 — Phase 1 complete. INFRA-01 (migration applied), INFRA-04 (Vercel deployed)*
