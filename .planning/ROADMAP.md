@@ -48,7 +48,11 @@ Plans:
   3. User enters a Houston ZIP code into the seat checker and sees "X of Y seats remaining" per role, sourced from the database
   4. User sees the $100 price anchor with "Applied to your first live month" framing — no "non-refundable" language
   5. Page renders correctly and is fully usable on a 375px mobile viewport
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Dark theme, serif typography, all static sections (Hero, How It Works, Competitor Contrast, Pricing, Credibility, CTA), sticky Apply CTA, scroll animations
+- [ ] 02-02-PLAN.md — Live ZIP seat checker (API route + client component) and visual verification checkpoint
 
 ### Phase 3: Application Form (Steps 1-2)
 **Goal**: A user can progress through the first two form steps with their data persisted to the database at each step, and can recover their progress if they close and return
@@ -104,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-02-20 |
-| 2. Landing Page | 0/TBD | Not started | - |
+| 2. Landing Page | 0/2 | Not started | - |
 | 3. Application Form (Steps 1-2) | 0/TBD | Not started | - |
 | 4. Payment, Legal, and Email | 0/TBD | Not started | - |
 | 5. Admin Application Queue | 0/TBD | Not started | - |
