@@ -50,7 +50,7 @@
 
 ### Admin Dashboard
 
-- [ ] **ADMIN-01**: Admin can log in via Supabase Auth (protected routes)
+- [x] **ADMIN-01**: Admin can log in via Supabase Auth (protected routes)
 - [ ] **ADMIN-02**: Admin can view application queue with status filters
 - [ ] **ADMIN-03**: Admin can view individual application detail (all fields + payment status)
 - [ ] **ADMIN-04**: Admin can approve, reject, or waitlist an application (triggers email)
@@ -69,7 +69,7 @@
 
 - [ ] **INFRA-01**: Database schema with RLS (applications, zip_seats, email_log tables)
 - [x] **INFRA-02**: Houston ZIP codes seeded with initial seat caps
-- [ ] **INFRA-03**: Stripe webhook endpoint with signature verification
+- [x] **INFRA-03**: Stripe webhook endpoint with signature verification
 - [ ] **INFRA-04**: Deployed to Vercel with environment variable management
 
 ## v2 Requirements
@@ -131,7 +131,7 @@
 | EMAIL-03 | Phase 4 | Pending |
 | EMAIL-04 | Phase 4 | Pending |
 | EMAIL-05 | Phase 4 | Pending |
-| ADMIN-01 | Phase 1 | Pending |
+| ADMIN-01 | Phase 1 | Complete |
 | ADMIN-02 | Phase 5 | Pending |
 | ADMIN-03 | Phase 5 | Pending |
 | ADMIN-04 | Phase 5 | Pending |
@@ -144,7 +144,7 @@
 | ANLY-02 | Phase 6 | Pending |
 | INFRA-01 | Phase 1 | In Progress (DDL written, migration apply pending credentials) |
 | INFRA-02 | Phase 1 | Complete |
-| INFRA-03 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Complete |
 | INFRA-04 | Phase 1 | In Progress (env validation working, Vercel deploy pending credentials) |
 
 **Coverage:**

@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-19)
 Phase: 1 of 6 (Foundation)
 Plan: 3 of 3 in current phase (Phase 1 COMPLETE)
 Status: Phase 1 complete — all 3 plans executed
-Last activity: 2026-02-19 — Phase 1 Plan 3 executed: 209 Houston metro ZIPs seeded into zip_seats (1,254 rows)
+Last activity: 2026-02-20 — Phase 1 Plan 2 executed (out of order): admin auth, middleware, Stripe webhook skeleton, 3 admin accounts provisioned
 
 Progress: [██░░░░░░░░] 17%
 
@@ -60,6 +60,10 @@ Recent decisions affecting current work:
 - [01-01]: All-or-nothing approval for Phase 1 — per-ZIP approval deferred to future migration
 - [01-01]: Partial unique index on applications(email, role) WHERE status != 'rejected' — DB-level race condition prevention
 - [01-01]: RLS uses (select auth.jwt()) wrapper — 99.99% performance improvement for large tables
+- [01-02]: getUser() enforced in middleware and layout — never getSession() — security non-negotiable per research
+- [01-02]: Admin accounts use @mvr.internal emails — not real emails, cannot be spam-flagged
+- [01-02]: Webhook route excluded from admin auth — /api/webhooks/stripe must be publicly accessible for Stripe
+- [01-02]: Prisma 7 driver adapter deferred to Phase 3 — no DB queries until application form built
 - [Phase 01-foundation]: 209 ZIPs seeded (above 180-200 target): full Houston metro coverage warranted for demand signal capture
 - [Phase 01-foundation]: npm seed scripts use node --env-file=.env.local node_modules/.bin/tsx to bypass PATH colon issue from project directory name
 
@@ -67,6 +71,7 @@ Recent decisions affecting current work:
 
 - Apply migration: supabase/migrations/001_foundation.sql to Supabase project (requires project link or SQL editor paste) — still needed if not already applied
 - Deploy to Vercel with env vars configured (Phase 1 Plan 01 Task 3)
+- Install Prisma 7 driver adapter (@prisma/adapter-pg) before Phase 3 when DB queries are first needed
 - Begin Phase 2: Landing Page (public-facing homepage + seat checker)
 
 ### Blockers/Concerns
@@ -76,6 +81,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-02-19
-Stopped at: Plan 03 executed — Houston ZIP seed data compiled and seeded into zip_seats (1,254 rows). Phase 1 foundation complete. Ready for Phase 2: Landing Page.
+Last session: 2026-02-20
+Stopped at: Completed 01-02-PLAN.md — admin auth, login page, middleware, Stripe webhook skeleton complete. Phase 1 foundation fully built. Ready for Phase 2: Landing Page.
 Resume file: None
