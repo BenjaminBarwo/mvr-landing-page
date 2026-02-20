@@ -1,0 +1,151 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ============================================================================
+// Enums
+// ============================================================================
+
+enum ProfessionalRole {
+  agent
+  lender
+  inspector
+  title_company
+  appraiser
+  contractor
+
+  @@map("professional_role")
+}
+
+enum ApplicationStatus {
+  draft
+  submitted
+  approved
+  rejected
+  waitlisted
+
+  @@map("application_status")
+}
+
+enum ZipTier {
+  premium
+  standard
+  suburban
+
+  @@map("zip_tier")
+}
+
+// ============================================================================
+// Models
+// ============================================================================
+
+model Application {
+  id            String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  createdAt     DateTime          @default(now()) @map("created_at") @db.Timestamptz()
+  updatedAt     DateTime          @default(now()) @updatedAt @map("updated_at") @db.Timestamptz()
+  stepCompleted Int               @default(1) @map("step_completed")
+  status        ApplicationStatus @default(draft)
+
+  // Step 1 — Contact & Role
+  name  String
+  email String
+  phone String?
+  role  ProfessionalRole
+
+  // Step 2 — Business Details
+  primaryZip         String?  @map("primary_zip")
+  monthlyLeadSpend   String?  @map("monthly_lead_spend")
+  leadsPerMonth      String?  @map("leads_per_month")
+  transactionsClosed String?  @map("transactions_closed")
+  buysOnlineLeads    Boolean? @map("buys_online_leads")
+
+  // Step 3 / Payment
+  stripePaymentIntentId String?   @map("stripe_payment_intent_id")
+  stripePaymentStatus   String?   @map("stripe_payment_status")
+  paidAt                DateTime? @map("paid_at") @db.Timestamptz()
+  paymentAmountCents    Int?      @map("payment_amount_cents")
+
+  // Legal
+  termsAcceptedAt DateTime? @map("terms_accepted_at") @db.Timestamptz()
+  termsVersion    String?   @map("terms_version")
+
+  // Admin
+  reviewedBy String?   @map("reviewed_by") @db.Uuid
+  reviewedAt DateTime? @map("reviewed_at") @db.Timestamptz()
+  adminNotes String?   @map("admin_notes")
+
+  // Tracking
+  utmSource   String? @map("utm_source")
+  utmMedium   String? @map("utm_medium")
+  utmCampaign String? @map("utm_campaign")
+  referrer    String?
+  sessionId   String? @map("session_id")
+
+  // Relations
+  applicationZips ApplicationZip[]
+  emailLog        EmailLog[]
+
+  @@map("applications")
+}
+
+model ApplicationZip {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  applicationId String   @map("application_id") @db.Uuid
+  zipCode       String   @map("zip_code")
+  isPrimary     Boolean  @default(false) @map("is_primary")
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz()
+
+  // Relations
+  application Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+  @@unique([applicationId, zipCode])
+  @@map("application_zips")
+}
+
+model ZipSeat {
+  id           String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  zipCode      String           @map("zip_code")
+  role         ProfessionalRole
+  totalCap     Int              @default(3) @map("total_cap")
+  phantomCount Int              @default(0) @map("phantom_count")
+  tier         ZipTier          @default(standard)
+  neighborhood String?
+  createdAt    DateTime         @default(now()) @map("created_at") @db.Timestamptz()
+  updatedAt    DateTime         @default(now()) @updatedAt @map("updated_at") @db.Timestamptz()
+
+  @@unique([zipCode, role])
+  @@map("zip_seats")
+}
+
+model EmailLog {
+  id                String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  applicationId     String   @map("application_id") @db.Uuid
+  emailType         String   @map("email_type")
+  sentAt            DateTime @default(now()) @map("sent_at") @db.Timestamptz()
+  providerMessageId String?  @map("provider_message_id")
+  status            String   @default("sent")
+
+  // Relations
+  application Application @relation(fields: [applicationId], references: [id])
+
+  @@map("email_log")
+}
+
+model OutOfAreaInterest {
+  id        String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  zipCode   String            @map("zip_code")
+  role      ProfessionalRole?
+  createdAt DateTime          @default(now()) @map("created_at") @db.Timestamptz()
+  ipAddress String?           @map("ip_address")
+  userAgent String?           @map("user_agent")
+
+  @@map("out_of_area_interest")
+}
