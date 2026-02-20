@@ -68,7 +68,7 @@
 ### Infrastructure
 
 - [ ] **INFRA-01**: Database schema with RLS (applications, zip_seats, email_log tables)
-- [ ] **INFRA-02**: Houston ZIP codes seeded with initial seat caps
+- [x] **INFRA-02**: Houston ZIP codes seeded with initial seat caps
 - [ ] **INFRA-03**: Stripe webhook endpoint with signature verification
 - [ ] **INFRA-04**: Deployed to Vercel with environment variable management
 
@@ -143,7 +143,7 @@
 | ANLY-01 | Phase 6 | Pending |
 | ANLY-02 | Phase 6 | Pending |
 | INFRA-01 | Phase 1 | In Progress (DDL written, migration apply pending credentials) |
-| INFRA-02 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Pending |
 | INFRA-04 | Phase 1 | In Progress (env validation working, Vercel deploy pending credentials) |
 

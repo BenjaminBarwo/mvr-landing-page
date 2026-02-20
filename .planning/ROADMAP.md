@@ -12,7 +12,7 @@ Six phases build the complete demand validation pipeline. The sequence is dictat
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Database schema, infrastructure wiring, and admin auth — everything downstream depends on this being correct
+- [x] **Phase 1: Foundation** - Database schema, infrastructure wiring, and admin auth — everything downstream depends on this being correct (completed 2026-02-20)
 - [ ] **Phase 2: Landing Page** - Public-facing conversion surface with live ZIP seat checker and all persuasion copy
 - [ ] **Phase 3: Application Form (Steps 1-2)** - Progressive multi-step form with per-step DB persistence, before payment is involved
 - [ ] **Phase 4: Payment, Legal, and Email** - Stripe integration, terms acceptance, webhook-authoritative confirmation, and all transactional emails
@@ -103,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In progress — Plan 01 done (migration apply + Vercel pending user credentials) | 2026-02-20 (partial) |
+| 1. Foundation | 3/3 | Complete   | 2026-02-20 |
 | 2. Landing Page | 0/TBD | Not started | - |
 | 3. Application Form (Steps 1-2) | 0/TBD | Not started | - |
 | 4. Payment, Legal, and Email | 0/TBD | Not started | - |
