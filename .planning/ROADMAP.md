@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Project scaffold, dependencies, env validation, client singletons, database schema migration
+- [x] 01-01-PLAN.md — Project scaffold, dependencies, env validation, client singletons, database schema migration (migration apply + Vercel deploy pending credentials)
 - [ ] 01-02-PLAN.md — Admin auth (middleware, login, seed) and Stripe webhook skeleton
 - [ ] 01-03-PLAN.md — Houston ZIP seed data with tier assignments
 
@@ -103,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Planning complete | - |
+| 1. Foundation | 1/3 | In progress — Plan 01 done (migration apply + Vercel pending user credentials) | 2026-02-20 (partial) |
 | 2. Landing Page | 0/TBD | Not started | - |
 | 3. Application Form (Steps 1-2) | 0/TBD | Not started | - |
 | 4. Payment, Legal, and Email | 0/TBD | Not started | - |

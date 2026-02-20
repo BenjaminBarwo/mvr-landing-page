@@ -142,10 +142,10 @@
 | ADMIN-09 | Phase 6 | Pending |
 | ANLY-01 | Phase 6 | Pending |
 | ANLY-02 | Phase 6 | Pending |
-| INFRA-01 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | In Progress (DDL written, migration apply pending credentials) |
 | INFRA-02 | Phase 1 | Pending |
 | INFRA-03 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | In Progress (env validation working, Vercel deploy pending credentials) |
 
 **Coverage:**
 - v1 requirements: 43 total
@@ -154,4 +154,4 @@
 
 ---
 *Requirements defined: 2026-02-19*
-*Last updated: 2026-02-19 after roadmap creation — all requirements mapped*
+*Last updated: 2026-02-20 after Plan 01-01 execution — INFRA-01 and INFRA-04 in progress*
