@@ -31,7 +31,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The Stripe webhook endpoint exists and correctly verifies Stripe signatures (test mode)
   4. Admin can log in at `/admin` via Supabase Auth — unauthenticated users are redirected
   5. The project deploys to Vercel with all required environment variables validated at build time
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Project scaffold, dependencies, env validation, client singletons, database schema migration
+- [ ] 01-02-PLAN.md — Admin auth (middleware, login, seed) and Stripe webhook skeleton
+- [ ] 01-03-PLAN.md — Houston ZIP seed data with tier assignments
 
 ### Phase 2: Landing Page
 **Goal**: A professional sees the full conversion surface — dark minimal design, aggressive competitor contrast, live seat availability by ZIP, and a clear path to apply
@@ -98,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Planning complete | - |
 | 2. Landing Page | 0/TBD | Not started | - |
 | 3. Application Form (Steps 1-2) | 0/TBD | Not started | - |
 | 4. Payment, Legal, and Email | 0/TBD | Not started | - |
