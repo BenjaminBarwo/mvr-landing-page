@@ -1,0 +1,144 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+export function AppShowcase() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+  const [hasVideo, setHasVideo] = useState(true);
+
+  useEffect(() => {
+    fetch("/mvr-demo.mp4", { method: "HEAD" })
+      .then((res) => {
+        if (!res.ok) setHasVideo(false);
+      })
+      .catch(() => setHasVideo(false));
+  }, []);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  return (
+    <section
+      style={{
+        maxWidth: 1200,
+        margin: "0 auto",
+        padding: "0 24px 60px",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          borderRadius: 12,
+          overflow: "hidden",
+          boxShadow: "0 20px 60px -12px rgba(0,0,0,0.15)",
+        }}
+      >
+        {hasVideo ? (
+          <>
+            <video
+              ref={videoRef}
+              src="/mvr-demo.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+
+            {/* Mute/Unmute button */}
+            <button
+              onClick={toggleMute}
+              style={{
+                position: "absolute",
+                bottom: 16,
+                right: 16,
+                width: 44,
+                height: 44,
+                borderRadius: "50%",
+                background: "rgba(0,0,0,0.5)",
+                border: "none",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backdropFilter: "blur(8px)",
+                transition: "background 0.2s",
+              }}
+              aria-label={isMuted ? "Unmute video" : "Mute video"}
+            >
+              {isMuted ? (
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <line x1="23" y1="9" x2="17" y2="15" />
+                  <line x1="17" y1="9" x2="23" y2="15" />
+                </svg>
+              ) : (
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                </svg>
+              )}
+            </button>
+          </>
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              aspectRatio: "16 / 9",
+              gap: 12,
+              color: "#B2B2B2",
+              background: "#e8e9eb",
+            }}
+          >
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <polygon points="10 8 16 12 10 16 10 8" />
+            </svg>
+            <span style={{ fontSize: 14, fontWeight: 300 }}>
+              Product demo coming soon
+            </span>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
