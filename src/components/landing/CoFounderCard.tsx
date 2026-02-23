@@ -1,28 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
 export function CoFounderCard() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    function handleScroll() {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      setOffset(rect.top * 0.05);
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <section
-      ref={sectionRef}
-      style={{ position: "relative", padding: "120px 0 40px", overflow: "hidden" }}
-    >
+    <section style={{ position: "relative", padding: "120px 0 40px", overflow: "hidden" }}>
       <h2
         style={{
           letterSpacing: "-1px",
@@ -41,127 +21,109 @@ export function CoFounderCard() {
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
-          gap: 60,
-          maxWidth: 940,
+          maxWidth: 480,
           margin: "0 auto",
           padding: "0 24px",
+          textAlign: "center",
         }}
       >
-        {/* Left column — large hero photo with parallax + bottom fade */}
-        <div
-          style={{
-            flex: "0 0 55%",
-            minWidth: 0,
-            position: "relative",
-          }}
-        >
+        {/* Photo */}
+        <div style={{ position: "relative", width: 280, marginBottom: 32 }}>
           <img
             src="/cofounder-matthew.jpg"
             alt="Matthew Bramow"
             style={{
-              width: "120%",
-              maxWidth: "none",
+              width: "100%",
               height: "auto",
               display: "block",
-              transform: `translateY(${offset}px)`,
-              transition: "transform 0.1s linear",
-              willChange: "transform",
             }}
           />
-          {/* Bottom fade overlay — tall enough to cover parallax movement */}
+          {/* Bottom fade */}
           <div
             style={{
               position: "absolute",
-              bottom: -20,
-              left: "-10%",
-              right: "-10%",
-              height: "45%",
-              background:
-                "linear-gradient(to bottom, transparent 0%, #f5f5f5 55%)",
+              bottom: -2,
+              left: 0,
+              right: 0,
+              height: "40%",
+              background: "linear-gradient(to bottom, transparent 0%, #f5f5f5 70%)",
               pointerEvents: "none",
             }}
           />
         </div>
 
-        {/* Right column — text content */}
-        <div
+        {/* Text content */}
+        <h3
           style={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end",
+            fontSize: 26,
+            fontWeight: 600,
+            letterSpacing: "-1px",
+            color: "#000",
+            margin: 0,
           }}
         >
-          <h3
-            style={{
-              fontSize: 26,
-              fontWeight: 600,
-              letterSpacing: "-1px",
-              color: "#000",
-              margin: 0,
-            }}
-          >
-            Matthew Bramow
-          </h3>
-          <p
-            style={{
-              fontSize: 16,
-              fontWeight: 300,
-              lineHeight: 2,
-              letterSpacing: "-0.3px",
-              color: "#222",
-              margin: "4px 0 0",
-            }}
-          >
-            Co-Founder
-          </p>
-          <p
-            style={{
-              fontSize: 14,
-              fontWeight: 300,
-              lineHeight: 2,
-              letterSpacing: "-0.3px",
-              color: "#222",
-              margin: 0,
-            }}
-          >
-            CEO, Model Mortgage &middot; NMLS #1373388
-          </p>
+          Matthew Bramow
+        </h3>
+        <p
+          style={{
+            fontSize: 16,
+            fontWeight: 300,
+            lineHeight: 2,
+            letterSpacing: "-0.3px",
+            color: "#222",
+            margin: "4px 0 0",
+          }}
+        >
+          Co-Founder
+        </p>
+        <p
+          style={{
+            fontSize: 14,
+            fontWeight: 300,
+            lineHeight: 2,
+            letterSpacing: "-0.3px",
+            color: "#222",
+            margin: 0,
+          }}
+        >
+          CEO, Model Mortgage &middot; NMLS #1373388
+        </p>
 
-          <p
-            style={{
-              fontSize: 16,
-              fontWeight: 300,
-              fontStyle: "italic",
-              lineHeight: 2,
-              letterSpacing: "-0.3px",
-              color: "#222",
-              margin: "24px 0 0",
-            }}
-          >
-            &ldquo;Real estate professionals deserve a platform that protects
-            their territory and rewards early commitment.&rdquo;
-          </p>
+        <p
+          style={{
+            fontSize: 16,
+            fontWeight: 300,
+            fontStyle: "italic",
+            lineHeight: 2,
+            letterSpacing: "-0.3px",
+            color: "#222",
+            margin: "24px 0 0",
+            maxWidth: 360,
+          }}
+        >
+          &ldquo;Real estate professionals deserve a platform that protects
+          their territory and rewards early commitment.&rdquo;
+        </p>
 
-          <a
-            href="https://modelmtg.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              marginTop: 16,
-              fontSize: 14,
-              fontWeight: 500,
-              color: "#222",
-              letterSpacing: "-0.3px",
-              textDecoration: "underline",
-              transition: "all 0.4s ease",
-            }}
-          >
-            modelmtg.com
-          </a>
-        </div>
+        <a
+          href="https://modelmtg.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            marginTop: 16,
+            fontSize: 14,
+            fontWeight: 500,
+            color: "#222",
+            letterSpacing: "-0.3px",
+            textDecoration: "underline",
+            transition: "all 0.4s ease",
+          }}
+        >
+          modelmtg.com
+        </a>
       </div>
     </section>
   );
