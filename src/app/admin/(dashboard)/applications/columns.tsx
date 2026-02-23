@@ -5,8 +5,7 @@ import { Badge } from "@/components/ui/badge"
 
 export interface Application {
   id: string
-  first_name: string
-  last_name: string | null
+  name: string
   email: string
   phone: string | null
   role: string
@@ -24,9 +23,12 @@ export interface Application {
   monthly_lead_spend: string | null
   leads_per_month: string | null
   transactions_closed: string | null
-  buys_online_leads: string | null
+  buys_online_leads: boolean | null
   wtp_amount: string | null
   session_id: string | null
+  paid_at: string | null
+  payment_amount_cents: number | null
+  admin_notes: string | null
 }
 
 function formatRole(role: string): string {
@@ -71,17 +73,11 @@ function PaymentBadge({ status }: { status: string | null }) {
 
 export const columns: ColumnDef<Application>[] = [
   {
-    accessorKey: "first_name",
+    accessorKey: "name",
     header: "Name",
-    cell: ({ row }) => {
-      const first = row.original.first_name
-      const last = row.original.last_name ?? ""
-      return (
-        <span className="font-medium text-white">
-          {first} {last}
-        </span>
-      )
-    },
+    cell: ({ row }) => (
+      <span className="font-medium text-white">{row.original.name}</span>
+    ),
   },
   {
     accessorKey: "email",

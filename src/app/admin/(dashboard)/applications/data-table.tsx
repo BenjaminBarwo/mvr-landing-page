@@ -291,7 +291,7 @@ export function ApplicationsDataTable({
         >
           <SheetHeader className="border-b border-gray-800 pb-4">
             <SheetTitle className="text-white text-lg">
-              {selectedApp?.first_name} {selectedApp?.last_name ?? ""}
+              {selectedApp?.name}
             </SheetTitle>
           </SheetHeader>
           {selectedApp && (

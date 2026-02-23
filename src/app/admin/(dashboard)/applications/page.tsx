@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server"
 import { ApplicationsDataTable } from "./data-table"
+import type { Application } from "./columns"
 
 interface Props {
   searchParams: Promise<{
@@ -44,7 +45,7 @@ export default async function AdminApplicationsPage({ searchParams }: Props) {
   // Search filtering
   if (params.search && params.search.trim()) {
     const escaped = params.search.trim().replace(/[%_]/g, "\\$&")
-    query = query.or(`first_name.ilike.%${escaped}%,email.ilike.%${escaped}%`)
+    query = query.or(`name.ilike.%${escaped}%,email.ilike.%${escaped}%`)
   }
 
   // Role filtering
@@ -98,7 +99,7 @@ export default async function AdminApplicationsPage({ searchParams }: Props) {
         </p>
       </div>
       <ApplicationsDataTable
-        data={(applications ?? []) as Parameters<typeof ApplicationsDataTable>[0]["data"]}
+        data={(applications ?? []) as Application[]}
         totalCount={count ?? 0}
         page={page}
         pageSize={pageSize}
