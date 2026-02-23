@@ -45,6 +45,7 @@ export async function PUT(request: Request) {
       transactions_closed,
       buys_online_leads,
       step_completed: 2,
+      step2_completed_at: new Date().toISOString(),
     })
     .eq("session_id", sessionId)
     .eq("status", "draft")

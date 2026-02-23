@@ -58,6 +58,7 @@ export async function POST(request: Request) {
       primary_zip: zip_code,
       session_id: sessionId,
       step_completed: 1,
+      step1_completed_at: new Date().toISOString(),
       status: "draft",
     })
     .select("id")

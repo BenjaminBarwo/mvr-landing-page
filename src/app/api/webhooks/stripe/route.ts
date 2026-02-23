@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import { supabaseAdmin } from '@/lib/supabase/admin'
+import { sendEmail } from '@/lib/email'
 import Stripe from 'stripe'
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
@@ -41,14 +42,17 @@ export async function POST(request: NextRequest) {
         break
       }
 
+      const now = new Date().toISOString()
+
       // Update application status
       const { error: updateError } = await supabaseAdmin
         .from('applications')
         .update({
           status: 'submitted',
           stripe_payment_status: 'succeeded',
-          paid_at: new Date().toISOString(),
+          paid_at: now,
           step_completed: 3,
+          step3_completed_at: now,
         })
         .eq('id', applicationId)
 
@@ -57,31 +61,70 @@ export async function POST(request: NextRequest) {
         break
       }
 
-      // Get the application to find primary_zip for application_zips insertion
-      if (!primaryZip) {
-        const { data: app } = await supabaseAdmin
-          .from('applications')
-          .select('primary_zip')
-          .eq('id', applicationId)
-          .single()
+      // Insert status history record: draft -> submitted (changed_by null = system/webhook)
+      await supabaseAdmin
+        .from('application_status_history')
+        .insert({
+          application_id: applicationId,
+          from_status: 'draft',
+          to_status: 'submitted',
+          changed_by: null,
+          reason: 'Payment confirmed via Stripe webhook',
+        })
 
-        if (app?.primary_zip) {
-          await supabaseAdmin
-            .from('application_zips')
-            .insert({
-              application_id: applicationId,
-              zip_code: app.primary_zip,
-              is_primary: true,
-            })
-        }
-      } else {
+      // Resolve ZIP code and fetch applicant details for confirmation email
+      let resolvedZip = primaryZip
+      let appFirstName = ''
+      let appEmail = ''
+      let appRole = ''
+
+      const { data: app } = await supabaseAdmin
+        .from('applications')
+        .select('primary_zip, name, email, role')
+        .eq('id', applicationId)
+        .single()
+
+      if (app) {
+        resolvedZip = resolvedZip || app.primary_zip || ''
+        appFirstName = app.name || ''
+        appEmail = app.email || ''
+        appRole = app.role || ''
+      }
+
+      // Insert application_zips record for primary ZIP
+      if (resolvedZip) {
         await supabaseAdmin
           .from('application_zips')
           .insert({
             application_id: applicationId,
-            zip_code: primaryZip,
+            zip_code: resolvedZip,
             is_primary: true,
           })
+          .then(({ error }) => {
+            // Ignore duplicate inserts (idempotent webhook retries)
+            if (error && error.code !== '23505') {
+              console.error('Failed to insert application_zip:', error)
+            }
+          })
+      }
+
+      // Send confirmation email — failure must NOT prevent 200 response to Stripe
+      if (appEmail) {
+        try {
+          await sendEmail({
+            applicationId,
+            emailType: 'confirmation',
+            application: {
+              firstName: appFirstName,
+              email: appEmail,
+              role: appRole,
+              primary_zip: resolvedZip || '',
+              amountPaid: '$100',
+            },
+          })
+        } catch (emailErr) {
+          console.error('Confirmation email failed (non-fatal):', emailErr)
+        }
       }
 
       console.log('Payment succeeded for application:', applicationId)
