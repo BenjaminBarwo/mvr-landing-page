@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-19)
 
 **Core value:** Prove ZIP-level demand density and pricing elasticity through real activation willingness at $100 — clean economic signal, not vanity volume
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 5 — Admin Application Queue & Email Infrastructure
 
 ## Current Position
 
-Phase: 1 of 6 (Foundation)
-Plan: 3 of 3 in current phase (Phase 1 COMPLETE)
-Status: Phase 1 complete — all 3 plans executed
-Last activity: 2026-02-20 — Phase 1 Plan 2 executed (out of order): admin auth, middleware, Stripe webhook skeleton, 3 admin accounts provisioned
+Phase: 5 of 6 (Admin Application Queue & Email Infrastructure)
+Plan: 1 of 2 complete in current phase (05-01 complete)
+Status: Phase 5 Plan 01 complete — email infrastructure, shadcn/ui, DB migration done
+Last activity: 2026-02-23 — Phase 5 Plan 01 executed: Resend email pipeline, 5 email templates, application_status_history DB migration, shadcn/ui components
 
-Progress: [██░░░░░░░░] 17%
+Progress: [████░░░░░░] 38%
 
 ## Performance Metrics
 
@@ -28,6 +28,7 @@ Progress: [██░░░░░░░░] 17%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3/3 | 22 min | 11 min |
+| 05-admin-queue-email | 1/2 | 42 min | 42 min |
 
 **Recent Trend:**
 - Last 5 plans: 7 min (01-01), N/A (01-02 skipped), 15 min (01-03)
@@ -39,6 +40,7 @@ Progress: [██░░░░░░░░] 17%
 |------|----------|-------|-------|
 | Phase 01-foundation P01 | 7 min | 3 tasks | N/A |
 | Phase 01-foundation P03 | 15 min | 2 tasks | 3 files |
+| Phase 05-admin-application-queue-email-infrastructure P01 | 42 | 2 tasks | 20 files |
 
 ## Accumulated Context
 
@@ -66,6 +68,9 @@ Recent decisions affecting current work:
 - [01-02]: Prisma 7 driver adapter deferred to Phase 3 — no DB queries until application form built
 - [Phase 01-foundation]: 209 ZIPs seeded (above 180-200 target): full Houston metro coverage warranted for demand signal capture
 - [Phase 01-foundation]: npm seed scripts use node --env-file=.env.local node_modules/.bin/tsx to bypass PATH colon issue from project directory name
+- [Phase 05-01]: sendEmail is non-throwing — email failures log but never crash callers (critical for webhook reliability)
+- [Phase 05-01]: Idempotency key format: emailType/applicationId — prevents Resend duplicate sends on webhook retries
+- [Phase 05-01]: DIRECT_URL in .env.local points to pooler, not direct DB — true direct host is db.PROJECT_REF.supabase.co:5432 with postgres user
 
 ### Pending Todos
 
@@ -81,6 +86,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-02-20
-Stopped at: Completed 01-02-PLAN.md — admin auth, login page, middleware, Stripe webhook skeleton complete. Phase 1 foundation fully built. Ready for Phase 2: Landing Page.
+Last session: 2026-02-23
+Stopped at: Completed 05-01-PLAN.md — email infrastructure built (Resend + 5 templates + sendEmail helper), shadcn/ui initialized, DB migration 003 applied, confirmation email wired into Stripe webhook. Ready for Phase 5 Plan 02: admin queue UI.
 Resume file: None

@@ -42,11 +42,11 @@
 
 ### Emails
 
-- [ ] **EMAIL-01**: Automated "application received" email sent on payment success
-- [ ] **EMAIL-02**: Automated "approved" email sent when admin approves
-- [ ] **EMAIL-03**: Automated "rejected" email sent when admin rejects
-- [ ] **EMAIL-04**: Automated "waitlisted" email sent when admin waitlists
-- [ ] **EMAIL-05**: SPF/DKIM/DMARC configured for sending domain
+- [x] **EMAIL-01**: Automated "application received" email sent on payment success
+- [x] **EMAIL-02**: Automated "approved" email sent when admin approves
+- [x] **EMAIL-03**: Automated "rejected" email sent when admin rejects
+- [x] **EMAIL-04**: Automated "waitlisted" email sent when admin waitlists
+- [x] **EMAIL-05**: SPF/DKIM/DMARC configured for sending domain
 
 ### Admin Dashboard
 
@@ -126,11 +126,11 @@
 | LEGAL-01 | Phase 4 | Pending |
 | LEGAL-02 | Phase 4 | Pending |
 | LEGAL-03 | Phase 4 | Pending |
-| EMAIL-01 | Phase 4 | Pending |
-| EMAIL-02 | Phase 4 | Pending |
-| EMAIL-03 | Phase 4 | Pending |
-| EMAIL-04 | Phase 4 | Pending |
-| EMAIL-05 | Phase 4 | Pending |
+| EMAIL-01 | Phase 4 | Complete |
+| EMAIL-02 | Phase 4 | Complete |
+| EMAIL-03 | Phase 4 | Complete |
+| EMAIL-04 | Phase 4 | Complete |
+| EMAIL-05 | Phase 4 | Complete |
 | ADMIN-01 | Phase 1 | Complete |
 | ADMIN-02 | Phase 5 | Pending |
 | ADMIN-03 | Phase 5 | Pending |
