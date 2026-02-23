@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
+import { supabaseAdmin } from '@/lib/supabase/admin'
+import Stripe from 'stripe'
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
 
@@ -15,7 +17,7 @@ export async function POST(request: NextRequest) {
     )
   }
 
-  let event
+  let event: Stripe.Event
 
   try {
     event = stripe.webhooks.constructEvent(body, signature, webhookSecret)
@@ -29,20 +31,80 @@ export async function POST(request: NextRequest) {
   }
 
   switch (event.type) {
-    case 'payment_intent.succeeded':
-      // Phase 4: update application status, trigger confirmation email
-      console.log('Payment succeeded:', event.data.object.id)
-      break
+    case 'payment_intent.succeeded': {
+      const pi = event.data.object as Stripe.PaymentIntent
+      const applicationId = pi.metadata.application_id
+      const primaryZip = pi.metadata.zip_code
 
-    case 'payment_intent.payment_failed':
-      // Phase 4: update payment status
-      console.log('Payment failed:', event.data.object.id)
-      break
+      if (!applicationId) {
+        console.error('payment_intent.succeeded: missing application_id in metadata')
+        break
+      }
 
-    case 'checkout.session.completed':
-      // Phase 4: alternative payment flow
-      console.log('Checkout session completed:', event.data.object.id)
+      // Update application status
+      const { error: updateError } = await supabaseAdmin
+        .from('applications')
+        .update({
+          status: 'submitted',
+          stripe_payment_status: 'succeeded',
+          paid_at: new Date().toISOString(),
+          step_completed: 3,
+        })
+        .eq('id', applicationId)
+
+      if (updateError) {
+        console.error('Failed to update application on payment success:', updateError)
+        break
+      }
+
+      // Get the application to find primary_zip for application_zips insertion
+      if (!primaryZip) {
+        const { data: app } = await supabaseAdmin
+          .from('applications')
+          .select('primary_zip')
+          .eq('id', applicationId)
+          .single()
+
+        if (app?.primary_zip) {
+          await supabaseAdmin
+            .from('application_zips')
+            .insert({
+              application_id: applicationId,
+              zip_code: app.primary_zip,
+              is_primary: true,
+            })
+        }
+      } else {
+        await supabaseAdmin
+          .from('application_zips')
+          .insert({
+            application_id: applicationId,
+            zip_code: primaryZip,
+            is_primary: true,
+          })
+      }
+
+      console.log('Payment succeeded for application:', applicationId)
       break
+    }
+
+    case 'payment_intent.payment_failed': {
+      const pi = event.data.object as Stripe.PaymentIntent
+      const applicationId = pi.metadata.application_id
+
+      if (!applicationId) {
+        console.error('payment_intent.payment_failed: missing application_id in metadata')
+        break
+      }
+
+      await supabaseAdmin
+        .from('applications')
+        .update({ stripe_payment_status: 'failed' })
+        .eq('id', applicationId)
+
+      console.log('Payment failed for application:', applicationId)
+      break
+    }
 
     default:
       console.log('Unhandled event type:', event.type)

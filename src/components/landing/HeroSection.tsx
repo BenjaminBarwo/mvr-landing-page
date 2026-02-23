@@ -290,7 +290,7 @@ export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
               zIndex: 2,
             }}
           >
-            Join the waitlist
+            Reserve your seat
           </button>
         </div>
 
