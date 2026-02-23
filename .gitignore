@@ -44,9 +44,11 @@ yarn-error.log*
 # MCP config (contains auth tokens)
 .mcp.json
 
-# Video output
-video/out/
-video/node_modules/
+# Video (Remotion — abandoned)
+video/
+
+# Supabase temp
+supabase/.temp/
 
 # Misc
 .vercel
