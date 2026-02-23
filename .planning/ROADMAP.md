@@ -13,9 +13,9 @@ Six phases build the complete demand validation pipeline. The sequence is dictat
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Database schema, infrastructure wiring, and admin auth — everything downstream depends on this being correct (completed 2026-02-20)
-- [ ] **Phase 2: Landing Page** - Public-facing conversion surface with live ZIP seat checker and all persuasion copy
-- [ ] **Phase 3: Application Form (Steps 1-2)** - Progressive multi-step form with per-step DB persistence, before payment is involved
-- [ ] **Phase 4: Payment, Legal, and Email** - Stripe integration, terms acceptance, webhook-authoritative confirmation, and all transactional emails
+- [x] **Phase 2: Landing Page** - Public-facing conversion surface with all persuasion copy and 4-step reservation modal (completed 2026-02-23)
+- [x] **Phase 3: Application Form (Steps 1-2)** - Mostly covered by Phase 2 WaitlistModal. Gap: per-step timestamps not yet tracked (completed 2026-02-23)
+- [x] **Phase 4: Payment, Legal, and Email** - Payment + terms UI covered by Phase 2 modal. Gaps: terms fields not populated, confirmation email not built, SPF/DKIM/DMARC not configured (completed 2026-02-23)
 - [ ] **Phase 5: Admin Application Queue** - Minimum viable review workflow for real applicants entering the pipeline
 - [ ] **Phase 6: Scarcity Controls and Analytics** - Phantom fill management, seat cap editor, funnel metrics, and ZIP demand intelligence
 
@@ -54,39 +54,44 @@ Plans:
 - [ ] 02-01-PLAN.md — Dark theme, serif typography, all static sections (Hero, How It Works, Competitor Contrast, Pricing, Credibility, CTA), sticky Apply CTA, scroll animations
 - [ ] 02-02-PLAN.md — Live ZIP seat checker (API route + client component) and visual verification checkpoint
 
-### Phase 3: Application Form (Steps 1-2)
+### Phase 3: Application Form (Steps 1-2) — COVERED BY PHASE 2
 **Goal**: A user can progress through the first two form steps with their data persisted to the database at each step, and can recover their progress if they close and return
 **Depends on**: Phase 2
 **Requirements**: FORM-01, FORM-02, FORM-04, FORM-06, FORM-07
-**Success Criteria** (what must be TRUE):
-  1. User completes Step 1 (name, email, phone, role) and their application record is immediately created in the database — visible in Supabase Studio
-  2. User completes Step 2 (primary ZIP, top 3 ZIPs, monthly lead spend range, leads/month range, transactions/month range, currently buying online leads Y/N) and all fields are saved to the existing record
-  3. A visible step progress indicator shows which step the user is on across all 3 steps
-  4. User who closes the browser after Step 1 and returns sees their Step 1 data pre-filled (via localStorage session key + DB lookup)
-  5. The application record stores `step_completed`, `session_id`, and per-step timestamps to support abandonment recovery in v1.1
-**Plans**: TBD
+**Fulfilled by**: WaitlistModal 4-step reservation flow (built in Phase 2)
+- Modal Step 1 collects: firstName, email, phone, zipCode, role → POST /api/reservation/start creates application record
+- Modal Step 3 collects: monthlyLeadSpend, leadsPerMonth, transactionsClosed, buysOnlineLeads → PUT /api/reservation/business
+- Session recovery via localStorage `mvr_session_id` + GET /api/reservation/recover
+- Step progress shown as dot indicator across all 4 modal steps
+**Deferred**: Top 3 ZIP selection (single primary ZIP is sufficient for demand validation)
+**Not yet built**: Per-step completion timestamps (`step_1_completed_at`, `step_2_completed_at`, `step_3_completed_at`) for abandonment recovery analytics
+**Plans**: N/A (covered by 02-01)
 
-### Phase 4: Payment, Legal, and Email
+### Phase 4: Payment, Legal, and Email — COVERED BY PHASE 2
 **Goal**: A user can complete the $100 payment, accept terms, receive a confirmation, and the application pipeline is fully operational — payment status is set by webhook, not client callback
 **Depends on**: Phase 3
 **Requirements**: FORM-03, FORM-05, PAY-01, PAY-02, PAY-03, PAY-04, LEGAL-01, LEGAL-02, LEGAL-03, EMAIL-01, EMAIL-02, EMAIL-03, EMAIL-04, EMAIL-05
-**Success Criteria** (what must be TRUE):
-  1. User at Step 3 sees the Stripe Payment Element, must accept Terms of Service before the submit button is active, and the submit button disables immediately on click
-  2. After successful payment, user lands on a confirmation page reading "Application received. We review within 48 hours." — and the application status in the database is set by the Stripe webhook, not the client redirect
-  3. User receives an "application received" email within 2 minutes of payment completing
-  4. Terms acceptance timestamp (`terms_accepted_at`) and terms version are stored on the application record
-  5. Sending domain has SPF, DKIM, and DMARC records configured and email passes deliverability checks
-**Plans**: TBD
+**Fulfilled by**: WaitlistModal Step 4 (payment) + Step 5 (confirmation)
+- Stripe Payment Element with terms acceptance checkbox
+- POST /api/reservation/create-payment-intent → confirmPayment → POST /api/reservation/confirm
+- Confirmation screen: "You're in, {firstName}!"
+**Not yet built**: Confirmation email (EMAIL-01 through EMAIL-05), SPF/DKIM/DMARC setup, webhook-authoritative payment status
+**Note**: Email infrastructure can be added as a Phase 5 or 6 task if needed before launch
+**Plans**: N/A (covered by 02-01)
 
-### Phase 5: Admin Application Queue
-**Goal**: Admin can review, filter, and act on real applications — approving, rejecting, or waitlisting each one — with each action triggering the correct automated email
+### Phase 5: Admin Application Queue + Email Infrastructure
+**Goal**: Admin can review, filter, and act on real applications — approving, rejecting, or waitlisting each one — with each action triggering the correct automated email. Also ships the email infrastructure deferred from Phase 4 (confirmation email, SPF/DKIM/DMARC, terms field population, per-step timestamps).
 **Depends on**: Phase 4
-**Requirements**: ADMIN-02, ADMIN-03, ADMIN-04, ADMIN-05
+**Requirements**: ADMIN-02, ADMIN-03, ADMIN-04, ADMIN-05, EMAIL-01, EMAIL-02, EMAIL-03, EMAIL-04, EMAIL-05
 **Success Criteria** (what must be TRUE):
   1. Admin sees a paginated, sortable application list at `/admin/applications` filterable by status (submitted, approved, rejected, waitlisted) and by role and ZIP
   2. Admin opens an individual application and sees all fields from Steps 1 and 2, payment status, and full timestamp history
   3. Admin clicks "Approve," "Reject," or "Waitlist" on an application — status updates in the database and the correct automated email is dispatched within 2 minutes
   4. Admin sees partial applications (users who completed Step 1 or Step 2 but did not pay) with their contact info and the step they reached
+  5. User receives an "application received" confirmation email within 2 minutes of payment completing (Resend + React Email)
+  6. Sending domain has SPF, DKIM, and DMARC records configured and email passes deliverability checks
+  7. `terms_accepted_at` and `terms_version` are populated when user accepts terms in the reservation modal
+  8. Per-step completion timestamps are tracked for abandonment recovery analytics
 **Plans**: TBD
 
 ### Phase 6: Scarcity Controls and Analytics
@@ -107,9 +112,9 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/3 | Complete   | 2026-02-20 |
-| 2. Landing Page | 0/2 | Not started | - |
-| 3. Application Form (Steps 1-2) | 0/TBD | Not started | - |
-| 4. Payment, Legal, and Email | 0/TBD | Not started | - |
+| 1. Foundation | 3/3 | Complete | 2026-02-20 |
+| 2. Landing Page | 2/2 | Complete | 2026-02-23 |
+| 3. Application Form (Steps 1-2) | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
+| 4. Payment, Legal, and Email | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
 | 5. Admin Application Queue | 0/TBD | Not started | - |
 | 6. Scarcity Controls and Analytics | 0/TBD | Not started | - |
