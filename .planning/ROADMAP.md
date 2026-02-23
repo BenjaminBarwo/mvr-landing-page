@@ -92,7 +92,11 @@ Plans:
   6. Sending domain has SPF, DKIM, and DMARC records configured and email passes deliverability checks
   7. `terms_accepted_at` and `terms_version` are populated when user accepts terms in the reservation modal
   8. Per-step completion timestamps are tracked for abandonment recovery analytics
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Email infrastructure: dependencies, DB migration (status history + step timestamps), Resend setup, 5 branded email templates, confirmation email wired into Stripe webhook
+- [ ] 05-02-PLAN.md — Admin application queue: TanStack Table with status tabs/search/filters/pagination, slide-out detail panel with seat context and audit trail, approve/reject/waitlist actions with confirmation dialogs and automated emails, partial applications tab with outreach notes
 
 ### Phase 6: Scarcity Controls and Analytics
 **Goal**: Admin can tune perceived demand via phantom fill, enforce seat caps per role per ZIP, and read the funnel metrics needed to interpret demand validation results
@@ -116,5 +120,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Landing Page | 2/2 | Complete | 2026-02-23 |
 | 3. Application Form (Steps 1-2) | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
 | 4. Payment, Legal, and Email | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
-| 5. Admin Application Queue | 0/TBD | Not started | - |
+| 5. Admin Application Queue | 0/2 | Planned | - |
 | 6. Scarcity Controls and Analytics | 0/TBD | Not started | - |
