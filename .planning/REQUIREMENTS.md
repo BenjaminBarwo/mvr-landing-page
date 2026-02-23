@@ -51,10 +51,10 @@
 ### Admin Dashboard
 
 - [x] **ADMIN-01**: Admin can log in via Supabase Auth (protected routes)
-- [ ] **ADMIN-02**: Admin can view application queue with status filters
-- [ ] **ADMIN-03**: Admin can view individual application detail (all fields + payment status)
-- [ ] **ADMIN-04**: Admin can approve, reject, or waitlist an application (triggers email)
-- [ ] **ADMIN-05**: Admin can see partial applications with contact info + step reached
+- [x] **ADMIN-02**: Admin can view application queue with status filters
+- [x] **ADMIN-03**: Admin can view individual application detail (all fields + payment status)
+- [x] **ADMIN-04**: Admin can approve, reject, or waitlist an application (triggers email)
+- [x] **ADMIN-05**: Admin can see partial applications with contact info + step reached
 - [ ] **ADMIN-06**: Admin can configure seat caps per role per ZIP
 - [ ] **ADMIN-07**: Admin can set phantom fill count per ZIP (inflate perceived demand)
 - [ ] **ADMIN-08**: Admin can view ZIP demand heat map of Houston
@@ -132,10 +132,10 @@
 | EMAIL-04 | Phase 4 | Complete |
 | EMAIL-05 | Phase 4 | Complete |
 | ADMIN-01 | Phase 1 | Complete |
-| ADMIN-02 | Phase 5 | Pending |
-| ADMIN-03 | Phase 5 | Pending |
-| ADMIN-04 | Phase 5 | Pending |
-| ADMIN-05 | Phase 5 | Pending |
+| ADMIN-02 | Phase 5 | Complete |
+| ADMIN-03 | Phase 5 | Complete |
+| ADMIN-04 | Phase 5 | Complete |
+| ADMIN-05 | Phase 5 | Complete |
 | ADMIN-06 | Phase 6 | Pending |
 | ADMIN-07 | Phase 6 | Pending |
 | ADMIN-08 | Phase 6 | Pending |

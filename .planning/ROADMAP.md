@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Landing Page** - Public-facing conversion surface with all persuasion copy and 4-step reservation modal (completed 2026-02-23)
 - [x] **Phase 3: Application Form (Steps 1-2)** - Mostly covered by Phase 2 WaitlistModal. Gap: per-step timestamps not yet tracked (completed 2026-02-23)
 - [x] **Phase 4: Payment, Legal, and Email** - Payment + terms UI covered by Phase 2 modal. Gaps: terms fields not populated, confirmation email not built, SPF/DKIM/DMARC not configured (completed 2026-02-23)
-- [ ] **Phase 5: Admin Application Queue** - Minimum viable review workflow for real applicants entering the pipeline
+- [x] **Phase 5: Admin Application Queue** - Minimum viable review workflow for real applicants entering the pipeline (completed 2026-02-23)
 - [ ] **Phase 6: Scarcity Controls and Analytics** - Phantom fill management, seat cap editor, funnel metrics, and ZIP demand intelligence
 
 ## Phase Details
@@ -120,5 +120,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Landing Page | 2/2 | Complete | 2026-02-23 |
 | 3. Application Form (Steps 1-2) | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
 | 4. Payment, Legal, and Email | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
-| 5. Admin Application Queue | 1/2 | In Progress|  |
+| 5. Admin Application Queue | 2/2 | Complete   | 2026-02-23 |
 | 6. Scarcity Controls and Analytics | 0/TBD | Not started | - |
