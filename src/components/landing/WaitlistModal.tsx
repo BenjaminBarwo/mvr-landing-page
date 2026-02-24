@@ -3,6 +3,7 @@
 import { useEffect, useReducer, useRef, useState, useCallback } from "react";
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { stripePromise } from "@/lib/stripe-client";
+import { SeatCheckerRealtime } from "@/components/landing/SeatCheckerRealtime";
 
 /* ─── Constants ─── */
 
@@ -435,6 +436,18 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
         {state.step >= 1 && state.step <= 4 && (
           <StepIndicator currentStep={state.step} />
         )}
+
+        {/* Realtime seat updates — subscribes when ZIP/role are set */}
+        <SeatCheckerRealtime
+          zipCode={state.zipCode || null}
+          role={state.role || null}
+          onSeatUpdate={(data) =>
+            dispatch({
+              type: "SEATS_LOADED",
+              data: { inArea: true, seatsRemaining: data.seatsRemaining, totalCap: data.totalCap },
+            })
+          }
+        />
 
         {/* Step content */}
         {state.step === 1 && (
