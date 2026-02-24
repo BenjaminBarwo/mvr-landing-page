@@ -11,36 +11,33 @@ interface DemandMapClientProps {
   mapData: MapDataPoint[]
 }
 
-interface GeoJsonFeature {
-  type: "Feature"
-  properties: {
-    ZCTA5CE20: string
-    neighborhood?: string
-    tier?: string
-  }
-  geometry: {
-    type: string
-    coordinates: unknown
-  }
-}
-
-interface GeoJsonCollection {
-  type: "FeatureCollection"
-  features: GeoJsonFeature[]
-}
+type Centroids = Record<string, [number, number]>
 
 function getDensityColor(count: number): string {
-  if (count === 0) return "#374151" // gray-700
-  if (count <= 3) return "#16a34a" // green-600
-  if (count <= 6) return "#ca8a04" // yellow-600
-  return "#dc2626" // red-600
+  if (count === 0) return "#4b5563" // gray-600
+  if (count <= 3) return "#22c55e" // green-500
+  if (count <= 6) return "#eab308" // yellow-500
+  return "#ef4444" // red-500
 }
 
 function getFillRateColor(rate: number): string {
-  if (rate <= 25) return "#16a34a" // green-600
-  if (rate <= 50) return "#ca8a04" // yellow-600
-  if (rate <= 75) return "#ea580c" // orange-600
-  return "#dc2626" // red-600
+  if (rate <= 25) return "#22c55e" // green-500
+  if (rate <= 50) return "#eab308" // yellow-500
+  if (rate <= 75) return "#f97316" // orange-500
+  return "#ef4444" // red-500
+}
+
+function getRadius(count: number, mode: ViewMode, rate: number): number {
+  if (mode === "density") {
+    if (count === 0) return 6
+    if (count <= 3) return 8
+    if (count <= 6) return 11
+    return 14
+  }
+  if (rate <= 25) return 6
+  if (rate <= 50) return 8
+  if (rate <= 75) return 11
+  return 14
 }
 
 export default function DemandMapClient({ mapData }: DemandMapClientProps) {
@@ -48,9 +45,9 @@ export default function DemandMapClient({ mapData }: DemandMapClientProps) {
   const [viewMode, setViewMode] = useState<ViewMode>("density")
   const mapRef = useRef<HTMLDivElement>(null)
   const leafletMapRef = useRef<import("leaflet").Map | null>(null)
-  const geoLayerRef = useRef<import("leaflet").GeoJSON | null>(null)
+  const markersRef = useRef<import("leaflet").CircleMarker[]>([])
+  const centroidsRef = useRef<Centroids>({})
 
-  // Index mapData by zip_code for fast lookup
   const dataByZip = useRef<Record<string, MapDataPoint>>({})
   useEffect(() => {
     dataByZip.current = {}
@@ -62,24 +59,11 @@ export default function DemandMapClient({ mapData }: DemandMapClientProps) {
   useEffect(() => {
     if (!mapRef.current || leafletMapRef.current) return
 
-    // Dynamically import leaflet to avoid SSR issues (this component is client-only)
-    let L: typeof import("leaflet")
     import("leaflet").then((leaflet) => {
-      L = leaflet.default
-
-      // Fix Leaflet's default icon URLs (broken in webpack/Next.js)
-      // We don't use markers, so this is purely defensive
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      delete (L.Icon.Default.prototype as any)._getIconUrl
-      L.Icon.Default.mergeOptions({
-        iconRetinaUrl: "/leaflet/marker-icon-2x.png",
-        iconUrl: "/leaflet/marker-icon.png",
-        shadowUrl: "/leaflet/marker-shadow.png",
-      })
+      const L = leaflet.default
 
       if (!mapRef.current) return
 
-      // Initialize map centered on Houston
       const map = L.map(mapRef.current, {
         center: [29.7604, -95.3698],
         zoom: 10,
@@ -88,7 +72,6 @@ export default function DemandMapClient({ mapData }: DemandMapClientProps) {
 
       leafletMapRef.current = map
 
-      // Dark CartoDB tile layer to match admin theme
       L.tileLayer(
         "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
         {
@@ -99,71 +82,63 @@ export default function DemandMapClient({ mapData }: DemandMapClientProps) {
         }
       ).addTo(map)
 
-      // Fetch and render GeoJSON
-      fetch("/data/houston-zips.geojson")
+      // Load centroids and render circle markers
+      fetch("/data/houston-zip-centroids.json")
         .then((r) => r.json())
-        .then((geojson: GeoJsonCollection) => {
-          const geoLayer = L.geoJSON(geojson, {
-            style: (feature) => {
-              if (!feature) return { fillColor: "#374151", weight: 1, color: "#fff", fillOpacity: 0.7 }
-              const zip = feature.properties?.ZCTA5CE20 as string
-              const d = dataByZip.current[zip]
-              const count = d?.application_count ?? 0
-              return {
-                fillColor: getDensityColor(count),
-                weight: 1,
-                color: "#ffffff",
-                fillOpacity: 0.7,
-              }
-            },
-            onEachFeature: (feature, featureLayer) => {
-              const zip = feature.properties?.ZCTA5CE20 as string
-              const d = dataByZip.current[zip]
-              const count = d?.application_count ?? 0
-              const fillRate = d?.fill_rate ?? 0
+        .then((centroids: Centroids) => {
+          centroidsRef.current = centroids
+          const markers: import("leaflet").CircleMarker[] = []
 
-              featureLayer.bindTooltip(
-                `<div style="font-family:monospace;font-size:13px;line-height:1.5">
-                  <strong>ZIP ${zip}</strong><br/>
-                  ${count} application${count !== 1 ? "s" : ""}<br/>
-                  ${fillRate}% filled
-                </div>`,
-                { sticky: true, className: "mvr-map-tooltip" }
-              )
+          for (const [zip, [lat, lng]] of Object.entries(centroids)) {
+            const d = dataByZip.current[zip]
+            const count = d?.application_count ?? 0
+            const rate = d?.fill_rate ?? 0
+            const color = getDensityColor(count)
+            const radius = getRadius(count, "density", rate)
 
-              featureLayer.on("click", () => {
-                router.push(`/admin/seats?zip=${zip}`)
-              })
+            const marker = L.circleMarker([lat, lng], {
+              radius,
+              fillColor: color,
+              fillOpacity: 0.75,
+              color: "#fff",
+              weight: 1.5,
+              opacity: 0.9,
+            })
 
-              featureLayer.on("mouseover", function (e) {
-                const l = e.target as import("leaflet").Path
-                l.setStyle({ weight: 2, color: "#f9fafb", fillOpacity: 0.9 })
-              })
-              featureLayer.on("mouseout", function (e) {
-                const l = e.target as import("leaflet").Path
-                // Use the GeoJSON layer to reset individual feature style
-                if (l && (l as unknown as { feature: unknown }).feature) {
-                  const pathEl = l as import("leaflet").Path
-                  const feat = (pathEl as unknown as { feature: GeoJsonFeature }).feature
-                  const fZip = feat?.properties?.ZCTA5CE20
-                  const fd = dataByZip.current[fZip]
-                  const fCount = fd?.application_count ?? 0
-                  pathEl.setStyle({
-                    fillColor: getDensityColor(fCount),
-                    weight: 1,
-                    color: "#ffffff",
-                    fillOpacity: 0.7,
-                  })
-                }
-              })
-            },
-          })
+            marker.bindTooltip(
+              `<div style="font-family:system-ui;font-size:13px;line-height:1.6">
+                <strong style="font-size:14px">ZIP ${zip}</strong><br/>
+                <span style="color:#9ca3af">Applications:</span> ${count}<br/>
+                <span style="color:#9ca3af">Fill rate:</span> ${rate}%
+              </div>`,
+              { className: "mvr-map-tooltip", direction: "top", offset: [0, -8] }
+            )
 
-          geoLayer.addTo(map)
-          geoLayerRef.current = geoLayer
+            marker.on("click", () => {
+              router.push(`/admin/seats?zip=${zip}`)
+            })
+
+            marker.on("mouseover", () => {
+              marker.setStyle({ weight: 3, fillOpacity: 1, opacity: 1 })
+              marker.setRadius(radius + 3)
+            })
+
+            marker.on("mouseout", () => {
+              marker.setStyle({ weight: 1.5, fillOpacity: 0.75, opacity: 0.9 })
+              marker.setRadius(radius)
+            })
+
+            // Store zip on marker for view mode updates
+            ;(marker as unknown as { _zip: string })._zip = zip
+
+            marker.addTo(map)
+            markers.push(marker)
+          }
+
+          markersRef.current = markers
         })
         .catch((err) => {
-          console.error("Failed to load GeoJSON:", err)
+          console.error("Failed to load centroids:", err)
         })
     })
 
@@ -176,42 +151,32 @@ export default function DemandMapClient({ mapData }: DemandMapClientProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Update layer colors when viewMode or mapData changes
+  // Update marker colors/sizes when viewMode changes
   useEffect(() => {
-    const layer = geoLayerRef.current
-    if (!layer) return
-
-    layer.setStyle((feature) => {
-      if (!feature) return { fillColor: "#374151" }
-      const zip = feature.properties?.ZCTA5CE20 as string
+    for (const marker of markersRef.current) {
+      const zip = (marker as unknown as { _zip: string })._zip
       const d = dataByZip.current[zip]
-      if (viewMode === "density") {
-        const count = d?.application_count ?? 0
-        return {
-          fillColor: getDensityColor(count),
-          weight: 1,
-          color: "#ffffff",
-          fillOpacity: 0.7,
-        }
-      } else {
-        const rate = d?.fill_rate ?? 0
-        return {
-          fillColor: getFillRateColor(rate),
-          weight: 1,
-          color: "#ffffff",
-          fillOpacity: 0.7,
-        }
-      }
-    })
+      const count = d?.application_count ?? 0
+      const rate = d?.fill_rate ?? 0
+
+      const color =
+        viewMode === "density"
+          ? getDensityColor(count)
+          : getFillRateColor(rate)
+      const radius = getRadius(count, viewMode, rate)
+
+      marker.setStyle({ fillColor: color })
+      marker.setRadius(radius)
+    }
   }, [viewMode, mapData])
 
   return (
     <div className="space-y-4">
       {/* Toggle buttons */}
-      <div className="flex gap-2">
+      <div className="flex items-center gap-3">
         <button
           onClick={() => setViewMode("density")}
-          className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             viewMode === "density"
               ? "bg-white text-gray-900"
               : "bg-gray-800 text-gray-400 hover:text-white"
@@ -221,7 +186,7 @@ export default function DemandMapClient({ mapData }: DemandMapClientProps) {
         </button>
         <button
           onClick={() => setViewMode("fill_rate")}
-          className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             viewMode === "fill_rate"
               ? "bg-white text-gray-900"
               : "bg-gray-800 text-gray-400 hover:text-white"
@@ -229,69 +194,71 @@ export default function DemandMapClient({ mapData }: DemandMapClientProps) {
         >
           Seat Fill Rate
         </button>
-      </div>
 
-      {/* Legend */}
-      <div className="flex gap-4 text-xs text-gray-400">
-        {viewMode === "density" ? (
-          <>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#374151" }} />
-              0
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#16a34a" }} />
-              1–3
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#ca8a04" }} />
-              4–6
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#dc2626" }} />
-              7+
-            </span>
-          </>
-        ) : (
-          <>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#16a34a" }} />
-              0–25%
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#ca8a04" }} />
-              25–50%
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#ea580c" }} />
-              50–75%
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: "#dc2626" }} />
-              75–100%
-            </span>
-          </>
-        )}
-        <span className="ml-2 text-gray-500">Click a ZIP to view seat controls</span>
+        {/* Legend inline */}
+        <div className="flex gap-3 ml-4 text-xs text-gray-400">
+          {viewMode === "density" ? (
+            <>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#4b5563" }} />
+                0
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#22c55e" }} />
+                1-3
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#eab308" }} />
+                4-6
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#ef4444" }} />
+                7+
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#22c55e" }} />
+                0-25%
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#eab308" }} />
+                25-50%
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#f97316" }} />
+                50-75%
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: "#ef4444" }} />
+                75-100%
+              </span>
+            </>
+          )}
+        </div>
+
+        <span className="ml-auto text-xs text-gray-500">Click a ZIP to view seat controls</span>
       </div>
 
       {/* Map container */}
       <div
         ref={mapRef}
-        style={{ height: "600px", borderRadius: "0.375rem", overflow: "hidden" }}
+        style={{ height: "600px", borderRadius: "0.5rem", overflow: "hidden" }}
         className="border border-gray-800"
       />
 
       <style>{`
         .mvr-map-tooltip {
-          background: #1f2937;
-          border: 1px solid #374151;
-          color: #f9fafb;
-          border-radius: 4px;
-          padding: 6px 10px;
+          background: #111827 !important;
+          border: 1px solid #374151 !important;
+          color: #f9fafb !important;
+          border-radius: 8px !important;
+          padding: 8px 12px !important;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
         }
         .mvr-map-tooltip::before {
-          display: none;
+          border-top-color: #111827 !important;
         }
       `}</style>
     </div>
