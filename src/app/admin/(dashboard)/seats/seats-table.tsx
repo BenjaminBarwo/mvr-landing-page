@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useState, useTransition } from "react"
+import { useCallback, useEffect, useState, useTransition } from "react"
 import { useRouter } from "next/navigation"
 import {
   useReactTable,
@@ -50,6 +50,11 @@ export function SeatsTable({ initialData, currentRole }: SeatsTableProps) {
   const router = useRouter()
   const [data, setData] = useState<ZipSeatRow[]>(initialData)
   const [, startTransition] = useTransition()
+
+  // Sync local state when server data changes (e.g. after router.refresh)
+  useEffect(() => {
+    setData(initialData)
+  }, [initialData])
 
   // Bulk phantom fill state
   const [showPhantomForm, setShowPhantomForm] = useState(false)
