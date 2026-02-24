@@ -107,7 +107,12 @@ Plans:
   2. Admin configures seat caps per role per ZIP — when a territory reaches cap, the seat checker shows "0 remaining" and the form blocks new submissions for that ZIP/role combination
   3. Admin views a revenue summary showing total collected, refund count, and application counts by status
   4. Admin views funnel metrics showing conversion rates and drop-off counts at each step: visit, Step 1 submit, Step 2 submit, payment initiated, payment complete
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Seat controls table with inline editing, bulk actions, server actions, and DB migration (Realtime publication + page_visits table)
+- [ ] 06-02-PLAN.md — Analytics dashboard with revenue KPI cards, funnel step metrics, page visit tracking endpoint and client component
+- [ ] 06-03-PLAN.md — ZIP demand heat map (Leaflet choropleth), admin navigation, Supabase Realtime for public seat checker
 
 ## Progress
 
@@ -121,4 +126,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Application Form (Steps 1-2) | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
 | 4. Payment, Legal, and Email | N/A | Complete (covered by Phase 2 modal) | 2026-02-23 |
 | 5. Admin Application Queue | 2/2 | Complete   | 2026-02-23 |
-| 6. Scarcity Controls and Analytics | 0/TBD | Not started | - |
+| 6. Scarcity Controls and Analytics | 0/3 | Not started | - |
