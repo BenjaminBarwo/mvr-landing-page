@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-19)
 
 **Core value:** Prove ZIP-level demand density and pricing elasticity through real activation willingness at $100 — clean economic signal, not vanity volume
-**Current focus:** Phase 5 complete — ready for Phase 6
+**Current focus:** Phase 6 in progress — 06-02 (analytics dashboard) complete
 
 ## Current Position
 
-Phase: 5 of 6 complete (Admin Application Queue & Email Infrastructure)
-Plan: All plans complete
-Status: Phase 5 verified and complete — email infrastructure + admin queue UI fully operational
-Last activity: 2026-02-23 — Phase 5 verified: admin queue, status actions, email pipeline, audit trail all passing
+Phase: 6 of 6 in progress (Scarcity Controls and Analytics)
+Plan: 2 of 3 complete (06-02 analytics dashboard done; 06-01 seats table and 06-03 pending)
+Status: Phase 6 Plan 02 complete — analytics dashboard with KPI cards, funnel steps, and page visit tracking
+Last activity: 2026-02-24 — Phase 6 Plan 02 executed: /admin/analytics, PageViewTracker, POST /api/track/visit
 
-Progress: [██████████] 100% (Phase 5)
+Progress: [████████░░] 80% (Phase 6 in progress)
 
 ## Performance Metrics
 
@@ -42,6 +42,7 @@ Progress: [██████████] 100% (Phase 5)
 | Phase 01-foundation P03 | 15 min | 2 tasks | 3 files |
 | Phase 05-admin-application-queue-email-infrastructure P01 | 42 min | 2 tasks | 20 files |
 | Phase 05-admin-application-queue-email-infrastructure P02 | 5 min | 2 tasks | 6 files |
+| Phase 06-scarcity-controls-and-analytics P02 | 2 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,9 @@ Recent decisions affecting current work:
 - [Phase 05-verify]: Login email input uses type="text" (not type="email") to support .internal TLD
 - [Phase 05-verify]: Zod UUID validation relaxed to string().min(1) — DB enforces UUID type, avoids RFC 4122 strictness issues
 - [Phase 05-verify]: CSS imports use explicit node_modules paths for Turbopack dev server compatibility
+- [Phase 06-scarcity-controls-and-analytics]: Vertical step cards for funnel visualization — zero chart library dependencies, dark admin aesthetic match
+- [Phase 06-scarcity-controls-and-analytics]: Refund proxy: COUNT WHERE status=rejected AND stripe_payment_status=succeeded — no refunded_at column for MVP
+- [Phase 06-scarcity-controls-and-analytics]: Date range filter as URL searchParams links — bookmarkable, server-side filtering, no client JS
 
 ### Pending Todos
 
@@ -94,6 +98,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-02-23
-Stopped at: Phase 5 complete and verified. All plans executed, checkpoint passed.
+Last session: 2026-02-24
+Stopped at: Completed 06-02-PLAN.md — analytics dashboard complete. Next: 06-01 (seats table) and 06-03 (demand map / nav links).
 Resume file: None

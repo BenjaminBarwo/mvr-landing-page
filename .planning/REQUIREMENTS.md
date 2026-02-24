@@ -58,12 +58,12 @@
 - [ ] **ADMIN-06**: Admin can configure seat caps per role per ZIP
 - [ ] **ADMIN-07**: Admin can set phantom fill count per ZIP (inflate perceived demand)
 - [ ] **ADMIN-08**: Admin can view ZIP demand heat map of Houston
-- [ ] **ADMIN-09**: Admin can view revenue tracking (total collected, refunds, count by status)
+- [x] **ADMIN-09**: Admin can view revenue tracking (total collected, refunds, count by status)
 
 ### Analytics
 
-- [ ] **ANLY-01**: Funnel metrics tracked: visit → Step 1 submit → Step 2 submit → Payment initiated → Payment complete
-- [ ] **ANLY-02**: Drop-off rate visible per funnel step
+- [x] **ANLY-01**: Funnel metrics tracked: visit → Step 1 submit → Step 2 submit → Payment initiated → Payment complete
+- [x] **ANLY-02**: Drop-off rate visible per funnel step
 
 ### Infrastructure
 
@@ -139,9 +139,9 @@
 | ADMIN-06 | Phase 6 | Pending |
 | ADMIN-07 | Phase 6 | Pending |
 | ADMIN-08 | Phase 6 | Pending |
-| ADMIN-09 | Phase 6 | Pending |
-| ANLY-01 | Phase 6 | Pending |
-| ANLY-02 | Phase 6 | Pending |
+| ADMIN-09 | Phase 6 | Complete |
+| ANLY-01 | Phase 6 | Complete |
+| ANLY-02 | Phase 6 | Complete |
 | INFRA-01 | Phase 1 | Complete |
 | INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Complete |
