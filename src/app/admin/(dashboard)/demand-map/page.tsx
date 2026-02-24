@@ -1,14 +1,5 @@
-import dynamic from "next/dynamic"
 import { supabaseAdmin } from "@/lib/supabase/admin"
-
-const DemandMapClient = dynamic(() => import("./demand-map-client"), {
-  ssr: false,
-  loading: () => (
-    <div className="h-[600px] bg-gray-900 animate-pulse rounded flex items-center justify-center">
-      <span className="text-gray-500 text-sm">Loading map...</span>
-    </div>
-  ),
-})
+import { DemandMapLoader } from "./demand-map-loader"
 
 interface ZipSeatRow {
   zip_code: string
@@ -86,7 +77,7 @@ export default async function DemandMapPage() {
           Houston metro area — {mapData.length} ZIP codes tracked
         </p>
       </div>
-      <DemandMapClient mapData={mapData} />
+      <DemandMapLoader mapData={mapData} />
     </div>
   )
 }
