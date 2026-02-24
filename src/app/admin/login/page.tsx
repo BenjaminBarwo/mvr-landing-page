@@ -35,7 +35,7 @@ export default function AdminLoginPage() {
             <input
               id="email"
               name="email"
-              type="email"
+              type="text"
               required
               className="w-full bg-gray-900 border border-gray-800 rounded-lg px-3 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20"
               placeholder="admin@mvr.internal"

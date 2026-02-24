@@ -9,13 +9,13 @@ import { sendEmail, type EmailType } from "@/lib/email"
 // ─── Schemas ────────────────────────────────────────────────────────────────
 
 const updateStatusSchema = z.object({
-  applicationId: z.string().uuid(),
+  applicationId: z.string().min(1),
   status: z.enum(["approved", "rejected", "waitlisted", "submitted"]),
   reason: z.string().optional(),
 })
 
 const noteSchema = z.object({
-  applicationId: z.string().uuid(),
+  applicationId: z.string().min(1),
   note: z.string().min(1),
 })
 
