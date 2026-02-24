@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MVR — Secure Your ZIP Territory",
+  title: "MVR — Founding Seats",
   description:
     "Houston's first ZIP-locked professional routing platform. Secure your founding seat before launch.",
 };
