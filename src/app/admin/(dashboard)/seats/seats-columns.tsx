@@ -69,7 +69,7 @@ function EditableNumberCell({
       await table.options.meta?.updateData(row.original.id, columnId, value)
       prevValueRef.current = value
       setFlash(true)
-      setTimeout(() => setFlash(false), 1500)
+      setTimeout(() => setFlash(false), 2000)
     } catch {
       // On error, revert to previous value
       setValue(prevValueRef.current)
@@ -80,8 +80,8 @@ function EditableNumberCell({
 
   return (
     <div
-      className={`rounded transition-colors duration-300 ${
-        flash ? "border border-green-500 bg-green-950/30" : "border border-transparent"
+      className={`rounded transition-all duration-300 ${
+        flash ? "border border-green-400 bg-green-900/50 shadow-[0_0_8px_rgba(74,222,128,0.3)]" : "border border-transparent"
       }`}
     >
       <input
