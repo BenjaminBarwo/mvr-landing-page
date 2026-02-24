@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "MVR — Founding Seats",
   description:
-    "Houston's first ZIP-locked professional routing platform. Secure your founding seat before launch.",
+    "Built for real estate professionals who believe the best deals start with real relationships — not paid leads. Founding seats now open in Houston.",
 };
 
 export default function RootLayout({
