@@ -1,0 +1,7320 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77002",
+        "neighborhood": "Downtown Houston",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3857,
+              29.737299999999998
+            ],
+            [
+              -95.3497,
+              29.737299999999998
+            ],
+            [
+              -95.3497,
+              29.7733
+            ],
+            [
+              -95.3857,
+              29.7733
+            ],
+            [
+              -95.3857,
+              29.737299999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77003",
+        "neighborhood": "EaDo / East Downtown",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3662,
+              29.728800000000003
+            ],
+            [
+              -95.3342,
+              29.728800000000003
+            ],
+            [
+              -95.3342,
+              29.7608
+            ],
+            [
+              -95.3662,
+              29.7608
+            ],
+            [
+              -95.3662,
+              29.728800000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77004",
+        "neighborhood": "Midtown / Third Ward",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3827,
+              29.710900000000002
+            ],
+            [
+              -95.35069999999999,
+              29.710900000000002
+            ],
+            [
+              -95.35069999999999,
+              29.7429
+            ],
+            [
+              -95.3827,
+              29.7429
+            ],
+            [
+              -95.3827,
+              29.710900000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77005",
+        "neighborhood": "West University Place",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4397,
+              29.7007
+            ],
+            [
+              -95.40769999999999,
+              29.7007
+            ],
+            [
+              -95.40769999999999,
+              29.732699999999998
+            ],
+            [
+              -95.4397,
+              29.732699999999998
+            ],
+            [
+              -95.4397,
+              29.7007
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77006",
+        "neighborhood": "Montrose",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4097,
+              29.7237
+            ],
+            [
+              -95.37769999999999,
+              29.7237
+            ],
+            [
+              -95.37769999999999,
+              29.755699999999997
+            ],
+            [
+              -95.4097,
+              29.755699999999997
+            ],
+            [
+              -95.4097,
+              29.7237
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77007",
+        "neighborhood": "Rice Military / Washington Ave",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4197,
+              29.753700000000002
+            ],
+            [
+              -95.3877,
+              29.753700000000002
+            ],
+            [
+              -95.3877,
+              29.7857
+            ],
+            [
+              -95.4197,
+              29.7857
+            ],
+            [
+              -95.4197,
+              29.753700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77008",
+        "neighborhood": "The Heights",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4197,
+              29.7937
+            ],
+            [
+              -95.3877,
+              29.7937
+            ],
+            [
+              -95.3877,
+              29.825699999999998
+            ],
+            [
+              -95.4197,
+              29.825699999999998
+            ],
+            [
+              -95.4197,
+              29.7937
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77009",
+        "neighborhood": "Woodland Heights / Northside",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3797,
+              29.7737
+            ],
+            [
+              -95.34769999999999,
+              29.7737
+            ],
+            [
+              -95.34769999999999,
+              29.805699999999998
+            ],
+            [
+              -95.3797,
+              29.805699999999998
+            ],
+            [
+              -95.3797,
+              29.7737
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77010",
+        "neighborhood": "Downtown Houston (Central Business)",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3697,
+              29.7333
+            ],
+            [
+              -95.3457,
+              29.7333
+            ],
+            [
+              -95.3457,
+              29.7573
+            ],
+            [
+              -95.3697,
+              29.7573
+            ],
+            [
+              -95.3697,
+              29.7333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77011",
+        "neighborhood": "Magnolia Park / East End",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3497,
+              29.713700000000003
+            ],
+            [
+              -95.31769999999999,
+              29.713700000000003
+            ],
+            [
+              -95.31769999999999,
+              29.7457
+            ],
+            [
+              -95.3497,
+              29.7457
+            ],
+            [
+              -95.3497,
+              29.713700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77019",
+        "neighborhood": "River Oaks / Montrose West",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.42970000000001,
+              29.733700000000002
+            ],
+            [
+              -95.3977,
+              29.733700000000002
+            ],
+            [
+              -95.3977,
+              29.7657
+            ],
+            [
+              -95.42970000000001,
+              29.7657
+            ],
+            [
+              -95.42970000000001,
+              29.733700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77020",
+        "neighborhood": "Denver Harbor / Fifth Ward",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.33970000000001,
+              29.7637
+            ],
+            [
+              -95.3077,
+              29.7637
+            ],
+            [
+              -95.3077,
+              29.795699999999997
+            ],
+            [
+              -95.33970000000001,
+              29.795699999999997
+            ],
+            [
+              -95.33970000000001,
+              29.7637
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77021",
+        "neighborhood": "South Park / Sunnyside",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3897,
+              29.6737
+            ],
+            [
+              -95.3577,
+              29.6737
+            ],
+            [
+              -95.3577,
+              29.705699999999997
+            ],
+            [
+              -95.3897,
+              29.705699999999997
+            ],
+            [
+              -95.3897,
+              29.6737
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77023",
+        "neighborhood": "Second Ward / Eastwood",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3497,
+              29.7037
+            ],
+            [
+              -95.31769999999999,
+              29.7037
+            ],
+            [
+              -95.31769999999999,
+              29.735699999999998
+            ],
+            [
+              -95.3497,
+              29.735699999999998
+            ],
+            [
+              -95.3497,
+              29.7037
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77025",
+        "neighborhood": "Braeswood / Meyerland North",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4497,
+              29.6737
+            ],
+            [
+              -95.4177,
+              29.6737
+            ],
+            [
+              -95.4177,
+              29.705699999999997
+            ],
+            [
+              -95.4497,
+              29.705699999999997
+            ],
+            [
+              -95.4497,
+              29.6737
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77026",
+        "neighborhood": "Kashmere Gardens / Trinity",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3497,
+              29.7937
+            ],
+            [
+              -95.31769999999999,
+              29.7937
+            ],
+            [
+              -95.31769999999999,
+              29.825699999999998
+            ],
+            [
+              -95.3497,
+              29.825699999999998
+            ],
+            [
+              -95.3497,
+              29.7937
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77027",
+        "neighborhood": "Upper Kirby / River Oaks South",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4497,
+              29.733700000000002
+            ],
+            [
+              -95.4177,
+              29.733700000000002
+            ],
+            [
+              -95.4177,
+              29.7657
+            ],
+            [
+              -95.4497,
+              29.7657
+            ],
+            [
+              -95.4497,
+              29.733700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77030",
+        "neighborhood": "Texas Medical Center / Museum District",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4097,
+              29.693700000000003
+            ],
+            [
+              -95.37769999999999,
+              29.693700000000003
+            ],
+            [
+              -95.37769999999999,
+              29.7257
+            ],
+            [
+              -95.4097,
+              29.7257
+            ],
+            [
+              -95.4097,
+              29.693700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77046",
+        "neighborhood": "Greenway Plaza / Afton Oaks",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.45570000000001,
+              29.7277
+            ],
+            [
+              -95.4317,
+              29.7277
+            ],
+            [
+              -95.4317,
+              29.7517
+            ],
+            [
+              -95.45570000000001,
+              29.7517
+            ],
+            [
+              -95.45570000000001,
+              29.7277
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77056",
+        "neighborhood": "Galleria / Uptown",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.47970000000001,
+              29.733700000000002
+            ],
+            [
+              -95.4477,
+              29.733700000000002
+            ],
+            [
+              -95.4477,
+              29.7657
+            ],
+            [
+              -95.47970000000001,
+              29.7657
+            ],
+            [
+              -95.47970000000001,
+              29.733700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77098",
+        "neighborhood": "Montrose South / Lower Westheimer",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4177,
+              29.715700000000002
+            ],
+            [
+              -95.3897,
+              29.715700000000002
+            ],
+            [
+              -95.3897,
+              29.7437
+            ],
+            [
+              -95.4177,
+              29.7437
+            ],
+            [
+              -95.4177,
+              29.715700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77401",
+        "neighborhood": "Bellaire",
+        "tier": "premium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4777,
+              29.695700000000002
+            ],
+            [
+              -95.4497,
+              29.695700000000002
+            ],
+            [
+              -95.4497,
+              29.7237
+            ],
+            [
+              -95.4777,
+              29.7237
+            ],
+            [
+              -95.4777,
+              29.695700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77012",
+        "neighborhood": "Gulfgate / South Houston",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3217,
+              29.6917
+            ],
+            [
+              -95.2857,
+              29.6917
+            ],
+            [
+              -95.2857,
+              29.727700000000002
+            ],
+            [
+              -95.3217,
+              29.727700000000002
+            ],
+            [
+              -95.3217,
+              29.6917
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77013",
+        "neighborhood": "Edgebrook / Meadowbrook",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2837,
+              29.7197
+            ],
+            [
+              -95.2437,
+              29.7197
+            ],
+            [
+              -95.2437,
+              29.7597
+            ],
+            [
+              -95.2837,
+              29.7597
+            ],
+            [
+              -95.2837,
+              29.7197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77014",
+        "neighborhood": "North Houston / Aldine",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.46870000000001,
+              29.884700000000002
+            ],
+            [
+              -95.4187,
+              29.884700000000002
+            ],
+            [
+              -95.4187,
+              29.9347
+            ],
+            [
+              -95.46870000000001,
+              29.9347
+            ],
+            [
+              -95.46870000000001,
+              29.884700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77015",
+        "neighborhood": "Channelview / Cloverleaf",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2557,
+              29.747700000000002
+            ],
+            [
+              -95.2117,
+              29.747700000000002
+            ],
+            [
+              -95.2117,
+              29.7917
+            ],
+            [
+              -95.2557,
+              29.7917
+            ],
+            [
+              -95.2557,
+              29.747700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77016",
+        "neighborhood": "Settegast / Northpark",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.35369999999999,
+              29.8097
+            ],
+            [
+              -95.3137,
+              29.8097
+            ],
+            [
+              -95.3137,
+              29.8497
+            ],
+            [
+              -95.35369999999999,
+              29.8497
+            ],
+            [
+              -95.35369999999999,
+              29.8097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77017",
+        "neighborhood": "Park Place / South Belt",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3137,
+              29.6697
+            ],
+            [
+              -95.2737,
+              29.6697
+            ],
+            [
+              -95.2737,
+              29.709699999999998
+            ],
+            [
+              -95.3137,
+              29.709699999999998
+            ],
+            [
+              -95.3137,
+              29.6697
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77018",
+        "neighborhood": "Garden Oaks / Oak Forest",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4517,
+              29.8017
+            ],
+            [
+              -95.4157,
+              29.8017
+            ],
+            [
+              -95.4157,
+              29.8377
+            ],
+            [
+              -95.4517,
+              29.8377
+            ],
+            [
+              -95.4517,
+              29.8017
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77022",
+        "neighborhood": "Lindale Park / Near Northside",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3817,
+              29.8017
+            ],
+            [
+              -95.3457,
+              29.8017
+            ],
+            [
+              -95.3457,
+              29.8377
+            ],
+            [
+              -95.3817,
+              29.8377
+            ],
+            [
+              -95.3817,
+              29.8017
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77024",
+        "neighborhood": "Memorial / Hedwig Village",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5257,
+              29.7577
+            ],
+            [
+              -95.48169999999999,
+              29.7577
+            ],
+            [
+              -95.48169999999999,
+              29.801699999999997
+            ],
+            [
+              -95.5257,
+              29.801699999999997
+            ],
+            [
+              -95.5257,
+              29.7577
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77028",
+        "neighborhood": "Pleasantville / Northshore",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3057,
+              29.7877
+            ],
+            [
+              -95.26169999999999,
+              29.7877
+            ],
+            [
+              -95.26169999999999,
+              29.831699999999998
+            ],
+            [
+              -95.3057,
+              29.831699999999998
+            ],
+            [
+              -95.3057,
+              29.7877
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77029",
+        "neighborhood": "Jacinto City / Galena Manor",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2937,
+              29.7497
+            ],
+            [
+              -95.25370000000001,
+              29.7497
+            ],
+            [
+              -95.25370000000001,
+              29.7897
+            ],
+            [
+              -95.2937,
+              29.7897
+            ],
+            [
+              -95.2937,
+              29.7497
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77031",
+        "neighborhood": "Sharpstown South / Westwood",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.55369999999999,
+              29.6697
+            ],
+            [
+              -95.5137,
+              29.6697
+            ],
+            [
+              -95.5137,
+              29.709699999999998
+            ],
+            [
+              -95.55369999999999,
+              29.709699999999998
+            ],
+            [
+              -95.55369999999999,
+              29.6697
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77033",
+        "neighborhood": "South Acres / Crestmont",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3517,
+              29.651699999999998
+            ],
+            [
+              -95.31569999999999,
+              29.651699999999998
+            ],
+            [
+              -95.31569999999999,
+              29.6877
+            ],
+            [
+              -95.3517,
+              29.6877
+            ],
+            [
+              -95.3517,
+              29.651699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77034",
+        "neighborhood": "Ellington / Southbelt",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2757,
+              29.6277
+            ],
+            [
+              -95.23169999999999,
+              29.6277
+            ],
+            [
+              -95.23169999999999,
+              29.671699999999998
+            ],
+            [
+              -95.2757,
+              29.671699999999998
+            ],
+            [
+              -95.2757,
+              29.6277
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77035",
+        "neighborhood": "Meyerland / Willowbend",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5037,
+              29.6497
+            ],
+            [
+              -95.4637,
+              29.6497
+            ],
+            [
+              -95.4637,
+              29.6897
+            ],
+            [
+              -95.5037,
+              29.6897
+            ],
+            [
+              -95.5037,
+              29.6497
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77036",
+        "neighborhood": "Sharpstown / Chinatown",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5257,
+              29.687700000000003
+            ],
+            [
+              -95.48169999999999,
+              29.687700000000003
+            ],
+            [
+              -95.48169999999999,
+              29.7317
+            ],
+            [
+              -95.5257,
+              29.7317
+            ],
+            [
+              -95.5257,
+              29.687700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77037",
+        "neighborhood": "North Houston / Aldine West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4157,
+              29.847700000000003
+            ],
+            [
+              -95.37169999999999,
+              29.847700000000003
+            ],
+            [
+              -95.37169999999999,
+              29.8917
+            ],
+            [
+              -95.4157,
+              29.8917
+            ],
+            [
+              -95.4157,
+              29.847700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77038",
+        "neighborhood": "North Houston / Greenspoint",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4257,
+              29.8977
+            ],
+            [
+              -95.3817,
+              29.8977
+            ],
+            [
+              -95.3817,
+              29.941699999999997
+            ],
+            [
+              -95.4257,
+              29.941699999999997
+            ],
+            [
+              -95.4257,
+              29.8977
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77039",
+        "neighborhood": "Northeast Houston / Eastex",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3357,
+              29.847700000000003
+            ],
+            [
+              -95.29169999999999,
+              29.847700000000003
+            ],
+            [
+              -95.29169999999999,
+              29.8917
+            ],
+            [
+              -95.3357,
+              29.8917
+            ],
+            [
+              -95.3357,
+              29.847700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77040",
+        "neighborhood": "Northwest Houston / Jersey Village Area",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5587,
+              29.8347
+            ],
+            [
+              -95.50869999999999,
+              29.8347
+            ],
+            [
+              -95.50869999999999,
+              29.8847
+            ],
+            [
+              -95.5587,
+              29.8847
+            ],
+            [
+              -95.5587,
+              29.8347
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77041",
+        "neighborhood": "Northwest Houston / Fairbanks",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5557,
+              29.817700000000002
+            ],
+            [
+              -95.51169999999999,
+              29.817700000000002
+            ],
+            [
+              -95.51169999999999,
+              29.8617
+            ],
+            [
+              -95.5557,
+              29.8617
+            ],
+            [
+              -95.5557,
+              29.817700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77042",
+        "neighborhood": "Westchase / Briarmeadow",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.57570000000001,
+              29.7177
+            ],
+            [
+              -95.5317,
+              29.7177
+            ],
+            [
+              -95.5317,
+              29.761699999999998
+            ],
+            [
+              -95.57570000000001,
+              29.761699999999998
+            ],
+            [
+              -95.57570000000001,
+              29.7177
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77043",
+        "neighborhood": "Spring Branch West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5337,
+              29.7697
+            ],
+            [
+              -95.4937,
+              29.7697
+            ],
+            [
+              -95.4937,
+              29.8097
+            ],
+            [
+              -95.5337,
+              29.8097
+            ],
+            [
+              -95.5337,
+              29.7697
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77044",
+        "neighborhood": "Northeast Houston / Sheldon",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.21870000000001,
+              29.814700000000002
+            ],
+            [
+              -95.1687,
+              29.814700000000002
+            ],
+            [
+              -95.1687,
+              29.8647
+            ],
+            [
+              -95.21870000000001,
+              29.8647
+            ],
+            [
+              -95.21870000000001,
+              29.814700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77045",
+        "neighborhood": "South Houston / Hiram Clarke",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4537,
+              29.6397
+            ],
+            [
+              -95.4137,
+              29.6397
+            ],
+            [
+              -95.4137,
+              29.6797
+            ],
+            [
+              -95.4537,
+              29.6797
+            ],
+            [
+              -95.4537,
+              29.6397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77047",
+        "neighborhood": "South Houston / Almeda",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4457,
+              29.6077
+            ],
+            [
+              -95.40169999999999,
+              29.6077
+            ],
+            [
+              -95.40169999999999,
+              29.651699999999998
+            ],
+            [
+              -95.4457,
+              29.651699999999998
+            ],
+            [
+              -95.4457,
+              29.6077
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77048",
+        "neighborhood": "South Houston / Reed Road",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.40570000000001,
+              29.5877
+            ],
+            [
+              -95.3617,
+              29.5877
+            ],
+            [
+              -95.3617,
+              29.6317
+            ],
+            [
+              -95.40570000000001,
+              29.6317
+            ],
+            [
+              -95.40570000000001,
+              29.5877
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77049",
+        "neighborhood": "Northeast Houston / Lake Houston",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.18870000000001,
+              29.794700000000002
+            ],
+            [
+              -95.1387,
+              29.794700000000002
+            ],
+            [
+              -95.1387,
+              29.8447
+            ],
+            [
+              -95.18870000000001,
+              29.8447
+            ],
+            [
+              -95.18870000000001,
+              29.794700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77050",
+        "neighborhood": "North Houston / Aldine East",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3557,
+              29.887700000000002
+            ],
+            [
+              -95.31169999999999,
+              29.887700000000002
+            ],
+            [
+              -95.31169999999999,
+              29.9317
+            ],
+            [
+              -95.3557,
+              29.9317
+            ],
+            [
+              -95.3557,
+              29.887700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77051",
+        "neighborhood": "South Houston / Fondren Southwest",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5037,
+              29.6397
+            ],
+            [
+              -95.4637,
+              29.6397
+            ],
+            [
+              -95.4637,
+              29.6797
+            ],
+            [
+              -95.5037,
+              29.6797
+            ],
+            [
+              -95.5037,
+              29.6397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77053",
+        "neighborhood": "Southwest Houston / Fort Bend",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5287,
+              29.5847
+            ],
+            [
+              -95.47869999999999,
+              29.5847
+            ],
+            [
+              -95.47869999999999,
+              29.6347
+            ],
+            [
+              -95.5287,
+              29.6347
+            ],
+            [
+              -95.5287,
+              29.5847
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77054",
+        "neighborhood": "South Main / Astrodome Area",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4217,
+              29.671699999999998
+            ],
+            [
+              -95.3857,
+              29.671699999999998
+            ],
+            [
+              -95.3857,
+              29.7077
+            ],
+            [
+              -95.4217,
+              29.7077
+            ],
+            [
+              -95.4217,
+              29.671699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77055",
+        "neighborhood": "Spring Branch / Memorial West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5137,
+              29.7697
+            ],
+            [
+              -95.47370000000001,
+              29.7697
+            ],
+            [
+              -95.47370000000001,
+              29.8097
+            ],
+            [
+              -95.5137,
+              29.8097
+            ],
+            [
+              -95.5137,
+              29.7697
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77057",
+        "neighborhood": "Galleria / Tanglewood",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5117,
+              29.7317
+            ],
+            [
+              -95.4757,
+              29.7317
+            ],
+            [
+              -95.4757,
+              29.7677
+            ],
+            [
+              -95.5117,
+              29.7677
+            ],
+            [
+              -95.5117,
+              29.7317
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77058",
+        "neighborhood": "Clear Lake / NASA",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.12570000000001,
+              29.547700000000003
+            ],
+            [
+              -95.0817,
+              29.547700000000003
+            ],
+            [
+              -95.0817,
+              29.5917
+            ],
+            [
+              -95.12570000000001,
+              29.5917
+            ],
+            [
+              -95.12570000000001,
+              29.547700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77059",
+        "neighborhood": "Clear Lake / Bay Area",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.15570000000001,
+              29.567700000000002
+            ],
+            [
+              -95.1117,
+              29.567700000000002
+            ],
+            [
+              -95.1117,
+              29.6117
+            ],
+            [
+              -95.15570000000001,
+              29.6117
+            ],
+            [
+              -95.15570000000001,
+              29.567700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77060",
+        "neighborhood": "North Houston / Greenspoint East",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3857,
+              29.9177
+            ],
+            [
+              -95.34169999999999,
+              29.9177
+            ],
+            [
+              -95.34169999999999,
+              29.961699999999997
+            ],
+            [
+              -95.3857,
+              29.961699999999997
+            ],
+            [
+              -95.3857,
+              29.9177
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77061",
+        "neighborhood": "South Houston / Golfcrest",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2817,
+              29.6417
+            ],
+            [
+              -95.2457,
+              29.6417
+            ],
+            [
+              -95.2457,
+              29.6777
+            ],
+            [
+              -95.2817,
+              29.6777
+            ],
+            [
+              -95.2817,
+              29.6417
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77062",
+        "neighborhood": "Clear Lake / Seabrook",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.12570000000001,
+              29.5577
+            ],
+            [
+              -95.0817,
+              29.5577
+            ],
+            [
+              -95.0817,
+              29.601699999999997
+            ],
+            [
+              -95.12570000000001,
+              29.601699999999997
+            ],
+            [
+              -95.12570000000001,
+              29.5577
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77063",
+        "neighborhood": "Sharpstown North / Briargrove",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5337,
+              29.7097
+            ],
+            [
+              -95.4937,
+              29.7097
+            ],
+            [
+              -95.4937,
+              29.7497
+            ],
+            [
+              -95.5337,
+              29.7497
+            ],
+            [
+              -95.5337,
+              29.7097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77064",
+        "neighborhood": "Northwest Houston / Willowbrook",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.57870000000001,
+              29.8747
+            ],
+            [
+              -95.5287,
+              29.8747
+            ],
+            [
+              -95.5287,
+              29.924699999999998
+            ],
+            [
+              -95.57870000000001,
+              29.924699999999998
+            ],
+            [
+              -95.57870000000001,
+              29.8747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77065",
+        "neighborhood": "Northwest Houston / Cypress Creek",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.59870000000001,
+              29.884700000000002
+            ],
+            [
+              -95.5487,
+              29.884700000000002
+            ],
+            [
+              -95.5487,
+              29.9347
+            ],
+            [
+              -95.59870000000001,
+              29.9347
+            ],
+            [
+              -95.59870000000001,
+              29.884700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77066",
+        "neighborhood": "North Houston / Champions",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4987,
+              29.9247
+            ],
+            [
+              -95.44869999999999,
+              29.9247
+            ],
+            [
+              -95.44869999999999,
+              29.9747
+            ],
+            [
+              -95.4987,
+              29.9747
+            ],
+            [
+              -95.4987,
+              29.9247
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77067",
+        "neighborhood": "North Houston / FM 1960 West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5287,
+              29.934700000000003
+            ],
+            [
+              -95.47869999999999,
+              29.934700000000003
+            ],
+            [
+              -95.47869999999999,
+              29.9847
+            ],
+            [
+              -95.5287,
+              29.9847
+            ],
+            [
+              -95.5287,
+              29.934700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77068",
+        "neighborhood": "Champions / FM 1960",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.51870000000001,
+              29.954700000000003
+            ],
+            [
+              -95.4687,
+              29.954700000000003
+            ],
+            [
+              -95.4687,
+              30.0047
+            ],
+            [
+              -95.51870000000001,
+              30.0047
+            ],
+            [
+              -95.51870000000001,
+              29.954700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77069",
+        "neighborhood": "Champions Forest / Willowbrook",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.54870000000001,
+              29.9447
+            ],
+            [
+              -95.4987,
+              29.9447
+            ],
+            [
+              -95.4987,
+              29.994699999999998
+            ],
+            [
+              -95.54870000000001,
+              29.994699999999998
+            ],
+            [
+              -95.54870000000001,
+              29.9447
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77070",
+        "neighborhood": "Northwest Houston / FM 1960",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.57870000000001,
+              29.934700000000003
+            ],
+            [
+              -95.5287,
+              29.934700000000003
+            ],
+            [
+              -95.5287,
+              29.9847
+            ],
+            [
+              -95.57870000000001,
+              29.9847
+            ],
+            [
+              -95.57870000000001,
+              29.934700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77071",
+        "neighborhood": "Southwest Houston / Fondren",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.52369999999999,
+              29.6497
+            ],
+            [
+              -95.4837,
+              29.6497
+            ],
+            [
+              -95.4837,
+              29.6897
+            ],
+            [
+              -95.52369999999999,
+              29.6897
+            ],
+            [
+              -95.52369999999999,
+              29.6497
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77072",
+        "neighborhood": "Southwest Houston / Alief South",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.57570000000001,
+              29.6777
+            ],
+            [
+              -95.5317,
+              29.6777
+            ],
+            [
+              -95.5317,
+              29.7217
+            ],
+            [
+              -95.57570000000001,
+              29.7217
+            ],
+            [
+              -95.57570000000001,
+              29.6777
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77074",
+        "neighborhood": "Sharpstown / Gulfton",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5337,
+              29.6797
+            ],
+            [
+              -95.4937,
+              29.6797
+            ],
+            [
+              -95.4937,
+              29.7197
+            ],
+            [
+              -95.5337,
+              29.7197
+            ],
+            [
+              -95.5337,
+              29.6797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77075",
+        "neighborhood": "South Houston / Sagemont",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3057,
+              29.6077
+            ],
+            [
+              -95.26169999999999,
+              29.6077
+            ],
+            [
+              -95.26169999999999,
+              29.651699999999998
+            ],
+            [
+              -95.3057,
+              29.651699999999998
+            ],
+            [
+              -95.3057,
+              29.6077
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77076",
+        "neighborhood": "North Houston / Shepherd Park",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.44369999999999,
+              29.8297
+            ],
+            [
+              -95.4037,
+              29.8297
+            ],
+            [
+              -95.4037,
+              29.869699999999998
+            ],
+            [
+              -95.44369999999999,
+              29.869699999999998
+            ],
+            [
+              -95.44369999999999,
+              29.8297
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77077",
+        "neighborhood": "West Houston / Energy Corridor",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.59570000000001,
+              29.7377
+            ],
+            [
+              -95.5517,
+              29.7377
+            ],
+            [
+              -95.5517,
+              29.781699999999997
+            ],
+            [
+              -95.59570000000001,
+              29.781699999999997
+            ],
+            [
+              -95.59570000000001,
+              29.7377
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77078",
+        "neighborhood": "Northeast Houston / Sheldon South",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2757,
+              29.8277
+            ],
+            [
+              -95.23169999999999,
+              29.8277
+            ],
+            [
+              -95.23169999999999,
+              29.871699999999997
+            ],
+            [
+              -95.2757,
+              29.871699999999997
+            ],
+            [
+              -95.2757,
+              29.8277
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77079",
+        "neighborhood": "Memorial / Nottingham Forest",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5637,
+              29.7497
+            ],
+            [
+              -95.5237,
+              29.7497
+            ],
+            [
+              -95.5237,
+              29.7897
+            ],
+            [
+              -95.5637,
+              29.7897
+            ],
+            [
+              -95.5637,
+              29.7497
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77080",
+        "neighborhood": "Spring Branch North",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5137,
+              29.7897
+            ],
+            [
+              -95.47370000000001,
+              29.7897
+            ],
+            [
+              -95.47370000000001,
+              29.8297
+            ],
+            [
+              -95.5137,
+              29.8297
+            ],
+            [
+              -95.5137,
+              29.7897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77081",
+        "neighborhood": "Meyerland West / Westbury",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.49369999999999,
+              29.6597
+            ],
+            [
+              -95.4537,
+              29.6597
+            ],
+            [
+              -95.4537,
+              29.6997
+            ],
+            [
+              -95.49369999999999,
+              29.6997
+            ],
+            [
+              -95.49369999999999,
+              29.6597
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77082",
+        "neighborhood": "West Houston / Westchase West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.59570000000001,
+              29.6977
+            ],
+            [
+              -95.5517,
+              29.6977
+            ],
+            [
+              -95.5517,
+              29.741699999999998
+            ],
+            [
+              -95.59570000000001,
+              29.741699999999998
+            ],
+            [
+              -95.59570000000001,
+              29.6977
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77083",
+        "neighborhood": "West Houston / Alief West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6187,
+              29.684700000000003
+            ],
+            [
+              -95.56869999999999,
+              29.684700000000003
+            ],
+            [
+              -95.56869999999999,
+              29.7347
+            ],
+            [
+              -95.6187,
+              29.7347
+            ],
+            [
+              -95.6187,
+              29.684700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77084",
+        "neighborhood": "West Houston / Bear Creek",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6637,
+              29.799699999999998
+            ],
+            [
+              -95.6037,
+              29.799699999999998
+            ],
+            [
+              -95.6037,
+              29.8597
+            ],
+            [
+              -95.6637,
+              29.8597
+            ],
+            [
+              -95.6637,
+              29.799699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77085",
+        "neighborhood": "South Houston / South Acres West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.51570000000001,
+              29.6277
+            ],
+            [
+              -95.4717,
+              29.6277
+            ],
+            [
+              -95.4717,
+              29.671699999999998
+            ],
+            [
+              -95.51570000000001,
+              29.671699999999998
+            ],
+            [
+              -95.51570000000001,
+              29.6277
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77086",
+        "neighborhood": "North Houston / Greenspoint West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4457,
+              29.8977
+            ],
+            [
+              -95.40169999999999,
+              29.8977
+            ],
+            [
+              -95.40169999999999,
+              29.941699999999997
+            ],
+            [
+              -95.4457,
+              29.941699999999997
+            ],
+            [
+              -95.4457,
+              29.8977
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77087",
+        "neighborhood": "South Houston / Pecan Park",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3237,
+              29.6597
+            ],
+            [
+              -95.28370000000001,
+              29.6597
+            ],
+            [
+              -95.28370000000001,
+              29.6997
+            ],
+            [
+              -95.3237,
+              29.6997
+            ],
+            [
+              -95.3237,
+              29.6597
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77088",
+        "neighborhood": "North Houston / Acres Homes",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4757,
+              29.847700000000003
+            ],
+            [
+              -95.43169999999999,
+              29.847700000000003
+            ],
+            [
+              -95.43169999999999,
+              29.8917
+            ],
+            [
+              -95.4757,
+              29.8917
+            ],
+            [
+              -95.4757,
+              29.847700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77089",
+        "neighborhood": "South Houston / Clear Lake West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2587,
+              29.5747
+            ],
+            [
+              -95.2087,
+              29.5747
+            ],
+            [
+              -95.2087,
+              29.624699999999997
+            ],
+            [
+              -95.2587,
+              29.624699999999997
+            ],
+            [
+              -95.2587,
+              29.5747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77090",
+        "neighborhood": "North Houston / FM 1960 East",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.46870000000001,
+              29.9447
+            ],
+            [
+              -95.4187,
+              29.9447
+            ],
+            [
+              -95.4187,
+              29.994699999999998
+            ],
+            [
+              -95.46870000000001,
+              29.994699999999998
+            ],
+            [
+              -95.46870000000001,
+              29.9447
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77091",
+        "neighborhood": "Northwest Houston / Shepherd Park",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4537,
+              29.8097
+            ],
+            [
+              -95.4137,
+              29.8097
+            ],
+            [
+              -95.4137,
+              29.8497
+            ],
+            [
+              -95.4537,
+              29.8497
+            ],
+            [
+              -95.4537,
+              29.8097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77092",
+        "neighborhood": "Northwest Houston / Mangum",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.48570000000001,
+              29.817700000000002
+            ],
+            [
+              -95.4417,
+              29.817700000000002
+            ],
+            [
+              -95.4417,
+              29.8617
+            ],
+            [
+              -95.48570000000001,
+              29.8617
+            ],
+            [
+              -95.48570000000001,
+              29.817700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77093",
+        "neighborhood": "North Houston / Eastex Jensen",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3557,
+              29.8377
+            ],
+            [
+              -95.31169999999999,
+              29.8377
+            ],
+            [
+              -95.31169999999999,
+              29.8817
+            ],
+            [
+              -95.3557,
+              29.8817
+            ],
+            [
+              -95.3557,
+              29.8377
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77094",
+        "neighborhood": "West Houston / Kelliwood",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.65870000000001,
+              29.7647
+            ],
+            [
+              -95.6087,
+              29.7647
+            ],
+            [
+              -95.6087,
+              29.8147
+            ],
+            [
+              -95.65870000000001,
+              29.8147
+            ],
+            [
+              -95.65870000000001,
+              29.7647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77095",
+        "neighborhood": "Northwest Houston / Copperfield",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6517,
+              29.841700000000003
+            ],
+            [
+              -95.5957,
+              29.841700000000003
+            ],
+            [
+              -95.5957,
+              29.8977
+            ],
+            [
+              -95.6517,
+              29.8977
+            ],
+            [
+              -95.6517,
+              29.841700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77096",
+        "neighborhood": "Southwest Houston / Fondren Southwest",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5217,
+              29.651699999999998
+            ],
+            [
+              -95.4857,
+              29.651699999999998
+            ],
+            [
+              -95.4857,
+              29.6877
+            ],
+            [
+              -95.5217,
+              29.6877
+            ],
+            [
+              -95.5217,
+              29.651699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77099",
+        "neighborhood": "Southwest Houston / Westwood",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6157,
+              29.657700000000002
+            ],
+            [
+              -95.57169999999999,
+              29.657700000000002
+            ],
+            [
+              -95.57169999999999,
+              29.7017
+            ],
+            [
+              -95.6157,
+              29.7017
+            ],
+            [
+              -95.6157,
+              29.657700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77396",
+        "neighborhood": "Humble / Atascocita",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.23870000000001,
+              29.9647
+            ],
+            [
+              -95.1887,
+              29.9647
+            ],
+            [
+              -95.1887,
+              30.014699999999998
+            ],
+            [
+              -95.23870000000001,
+              30.014699999999998
+            ],
+            [
+              -95.23870000000001,
+              29.9647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77402",
+        "neighborhood": "Bellaire (Business)",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.47370000000001,
+              29.6997
+            ],
+            [
+              -95.4537,
+              29.6997
+            ],
+            [
+              -95.4537,
+              29.719700000000003
+            ],
+            [
+              -95.47370000000001,
+              29.719700000000003
+            ],
+            [
+              -95.47370000000001,
+              29.6997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77459",
+        "neighborhood": "Missouri City / Sienna",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5737,
+              29.5297
+            ],
+            [
+              -95.5137,
+              29.5297
+            ],
+            [
+              -95.5137,
+              29.5897
+            ],
+            [
+              -95.5737,
+              29.5897
+            ],
+            [
+              -95.5737,
+              29.5297
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77478",
+        "neighborhood": "Sugar Land Central",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6187,
+              29.594700000000003
+            ],
+            [
+              -95.56869999999999,
+              29.594700000000003
+            ],
+            [
+              -95.56869999999999,
+              29.6447
+            ],
+            [
+              -95.6187,
+              29.6447
+            ],
+            [
+              -95.6187,
+              29.594700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77479",
+        "neighborhood": "Sugar Land / New Territory",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.66170000000001,
+              29.5717
+            ],
+            [
+              -95.6057,
+              29.5717
+            ],
+            [
+              -95.6057,
+              29.627699999999997
+            ],
+            [
+              -95.66170000000001,
+              29.627699999999997
+            ],
+            [
+              -95.66170000000001,
+              29.5717
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77489",
+        "neighborhood": "Missouri City",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5687,
+              29.544700000000002
+            ],
+            [
+              -95.5187,
+              29.544700000000002
+            ],
+            [
+              -95.5187,
+              29.5947
+            ],
+            [
+              -95.5687,
+              29.5947
+            ],
+            [
+              -95.5687,
+              29.544700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77498",
+        "neighborhood": "Sugar Land / Stafford",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.65870000000001,
+              29.614700000000003
+            ],
+            [
+              -95.6087,
+              29.614700000000003
+            ],
+            [
+              -95.6087,
+              29.6647
+            ],
+            [
+              -95.65870000000001,
+              29.6647
+            ],
+            [
+              -95.65870000000001,
+              29.614700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77502",
+        "neighborhood": "Pasadena Central",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.23570000000001,
+              29.6677
+            ],
+            [
+              -95.1917,
+              29.6677
+            ],
+            [
+              -95.1917,
+              29.711699999999997
+            ],
+            [
+              -95.23570000000001,
+              29.711699999999997
+            ],
+            [
+              -95.23570000000001,
+              29.6677
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77503",
+        "neighborhood": "Pasadena South",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.24369999999999,
+              29.6397
+            ],
+            [
+              -95.2037,
+              29.6397
+            ],
+            [
+              -95.2037,
+              29.6797
+            ],
+            [
+              -95.24369999999999,
+              29.6797
+            ],
+            [
+              -95.24369999999999,
+              29.6397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77504",
+        "neighborhood": "Pasadena East",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.20570000000001,
+              29.657700000000002
+            ],
+            [
+              -95.1617,
+              29.657700000000002
+            ],
+            [
+              -95.1617,
+              29.7017
+            ],
+            [
+              -95.20570000000001,
+              29.7017
+            ],
+            [
+              -95.20570000000001,
+              29.657700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77505",
+        "neighborhood": "Pasadena West",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.21570000000001,
+              29.6777
+            ],
+            [
+              -95.1717,
+              29.6777
+            ],
+            [
+              -95.1717,
+              29.7217
+            ],
+            [
+              -95.21570000000001,
+              29.7217
+            ],
+            [
+              -95.21570000000001,
+              29.6777
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77506",
+        "neighborhood": "Pasadena North",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2257,
+              29.6977
+            ],
+            [
+              -95.18169999999999,
+              29.6977
+            ],
+            [
+              -95.18169999999999,
+              29.741699999999998
+            ],
+            [
+              -95.2257,
+              29.741699999999998
+            ],
+            [
+              -95.2257,
+              29.6977
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77507",
+        "neighborhood": "Pasadena / Deer Park",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1687,
+              29.634700000000002
+            ],
+            [
+              -95.11869999999999,
+              29.634700000000002
+            ],
+            [
+              -95.11869999999999,
+              29.6847
+            ],
+            [
+              -95.1687,
+              29.6847
+            ],
+            [
+              -95.1687,
+              29.634700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77520",
+        "neighborhood": "Baytown Central",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.9987,
+              29.7147
+            ],
+            [
+              -94.94869999999999,
+              29.7147
+            ],
+            [
+              -94.94869999999999,
+              29.764699999999998
+            ],
+            [
+              -94.9987,
+              29.764699999999998
+            ],
+            [
+              -94.9987,
+              29.7147
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77521",
+        "neighborhood": "Baytown East",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.96170000000001,
+              29.7417
+            ],
+            [
+              -94.9057,
+              29.7417
+            ],
+            [
+              -94.9057,
+              29.7977
+            ],
+            [
+              -94.96170000000001,
+              29.7977
+            ],
+            [
+              -94.96170000000001,
+              29.7417
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77530",
+        "neighborhood": "Channelview",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1387,
+              29.774700000000003
+            ],
+            [
+              -95.08869999999999,
+              29.774700000000003
+            ],
+            [
+              -95.08869999999999,
+              29.8247
+            ],
+            [
+              -95.1387,
+              29.8247
+            ],
+            [
+              -95.1387,
+              29.774700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77536",
+        "neighborhood": "Deer Park",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1487,
+              29.684700000000003
+            ],
+            [
+              -95.0987,
+              29.684700000000003
+            ],
+            [
+              -95.0987,
+              29.7347
+            ],
+            [
+              -95.1487,
+              29.7347
+            ],
+            [
+              -95.1487,
+              29.684700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77546",
+        "neighborhood": "Friendswood",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1687,
+              29.4847
+            ],
+            [
+              -95.11869999999999,
+              29.4847
+            ],
+            [
+              -95.11869999999999,
+              29.534699999999997
+            ],
+            [
+              -95.1687,
+              29.534699999999997
+            ],
+            [
+              -95.1687,
+              29.4847
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77571",
+        "neighborhood": "La Porte",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.05170000000001,
+              29.6417
+            ],
+            [
+              -94.9957,
+              29.6417
+            ],
+            [
+              -94.9957,
+              29.697699999999998
+            ],
+            [
+              -95.05170000000001,
+              29.697699999999998
+            ],
+            [
+              -95.05170000000001,
+              29.6417
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77573",
+        "neighborhood": "League City",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1137,
+              29.4897
+            ],
+            [
+              -95.05369999999999,
+              29.4897
+            ],
+            [
+              -95.05369999999999,
+              29.5497
+            ],
+            [
+              -95.1137,
+              29.5497
+            ],
+            [
+              -95.1137,
+              29.4897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77581",
+        "neighborhood": "Pearland Central",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.3087,
+              29.544700000000002
+            ],
+            [
+              -95.25869999999999,
+              29.544700000000002
+            ],
+            [
+              -95.25869999999999,
+              29.5947
+            ],
+            [
+              -95.3087,
+              29.5947
+            ],
+            [
+              -95.3087,
+              29.544700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77584",
+        "neighborhood": "Pearland South / Shadow Creek",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.35170000000001,
+              29.5017
+            ],
+            [
+              -95.2957,
+              29.5017
+            ],
+            [
+              -95.2957,
+              29.557699999999997
+            ],
+            [
+              -95.35170000000001,
+              29.557699999999997
+            ],
+            [
+              -95.35170000000001,
+              29.5017
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77338",
+        "neighborhood": "Humble Central",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2887,
+              29.9647
+            ],
+            [
+              -95.2387,
+              29.9647
+            ],
+            [
+              -95.2387,
+              30.014699999999998
+            ],
+            [
+              -95.2887,
+              30.014699999999998
+            ],
+            [
+              -95.2887,
+              29.9647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77346",
+        "neighborhood": "Humble / Kingwood South",
+        "tier": "standard"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2137,
+              29.9397
+            ],
+            [
+              -95.1537,
+              29.9397
+            ],
+            [
+              -95.1537,
+              29.9997
+            ],
+            [
+              -95.2137,
+              29.9997
+            ],
+            [
+              -95.2137,
+              29.9397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77301",
+        "neighborhood": "Conroe Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.50370000000001,
+              30.279700000000002
+            ],
+            [
+              -95.4237,
+              30.279700000000002
+            ],
+            [
+              -95.4237,
+              30.3597
+            ],
+            [
+              -95.50370000000001,
+              30.3597
+            ],
+            [
+              -95.50370000000001,
+              30.279700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77302",
+        "neighborhood": "Conroe East / Willis South",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4337,
+              30.3097
+            ],
+            [
+              -95.35369999999999,
+              30.3097
+            ],
+            [
+              -95.35369999999999,
+              30.389699999999998
+            ],
+            [
+              -95.4337,
+              30.389699999999998
+            ],
+            [
+              -95.4337,
+              30.3097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77303",
+        "neighborhood": "Conroe West",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.56370000000001,
+              30.329700000000003
+            ],
+            [
+              -95.4837,
+              30.329700000000003
+            ],
+            [
+              -95.4837,
+              30.4097
+            ],
+            [
+              -95.56370000000001,
+              30.4097
+            ],
+            [
+              -95.56370000000001,
+              30.329700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77304",
+        "neighborhood": "Conroe South / Grand Central Park",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5437,
+              30.259700000000002
+            ],
+            [
+              -95.46369999999999,
+              30.259700000000002
+            ],
+            [
+              -95.46369999999999,
+              30.3397
+            ],
+            [
+              -95.5437,
+              30.3397
+            ],
+            [
+              -95.5437,
+              30.259700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77306",
+        "neighborhood": "Conroe North",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4937,
+              30.3797
+            ],
+            [
+              -95.41369999999999,
+              30.3797
+            ],
+            [
+              -95.41369999999999,
+              30.459699999999998
+            ],
+            [
+              -95.4937,
+              30.459699999999998
+            ],
+            [
+              -95.4937,
+              30.3797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77316",
+        "neighborhood": "Montgomery",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.7437,
+              30.299699999999998
+            ],
+            [
+              -95.64370000000001,
+              30.299699999999998
+            ],
+            [
+              -95.64370000000001,
+              30.3997
+            ],
+            [
+              -95.7437,
+              30.3997
+            ],
+            [
+              -95.7437,
+              30.299699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77318",
+        "neighborhood": "Willis",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5537,
+              30.3897
+            ],
+            [
+              -95.4737,
+              30.3897
+            ],
+            [
+              -95.4737,
+              30.4697
+            ],
+            [
+              -95.5537,
+              30.4697
+            ],
+            [
+              -95.5537,
+              30.3897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77336",
+        "neighborhood": "Huffman / Crosby",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.09370000000001,
+              30.009700000000002
+            ],
+            [
+              -95.0137,
+              30.009700000000002
+            ],
+            [
+              -95.0137,
+              30.0897
+            ],
+            [
+              -95.09370000000001,
+              30.0897
+            ],
+            [
+              -95.09370000000001,
+              30.009700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77339",
+        "neighborhood": "Kingwood",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2037,
+              30.0097
+            ],
+            [
+              -95.1437,
+              30.0097
+            ],
+            [
+              -95.1437,
+              30.0697
+            ],
+            [
+              -95.2037,
+              30.0697
+            ],
+            [
+              -95.2037,
+              30.0097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77345",
+        "neighborhood": "Kingwood / Porter Heights",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1737,
+              29.9897
+            ],
+            [
+              -95.1137,
+              29.9897
+            ],
+            [
+              -95.1137,
+              30.0497
+            ],
+            [
+              -95.1737,
+              30.0497
+            ],
+            [
+              -95.1737,
+              29.9897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77354",
+        "neighborhood": "Magnolia South",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.80369999999999,
+              30.1597
+            ],
+            [
+              -95.7037,
+              30.1597
+            ],
+            [
+              -95.7037,
+              30.259700000000002
+            ],
+            [
+              -95.80369999999999,
+              30.259700000000002
+            ],
+            [
+              -95.80369999999999,
+              30.1597
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77355",
+        "neighborhood": "Magnolia",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.8437,
+              30.1597
+            ],
+            [
+              -95.7437,
+              30.1597
+            ],
+            [
+              -95.7437,
+              30.259700000000002
+            ],
+            [
+              -95.8437,
+              30.259700000000002
+            ],
+            [
+              -95.8437,
+              30.1597
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77356",
+        "neighborhood": "Montgomery / Lake Conroe",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.8037,
+              30.3197
+            ],
+            [
+              -95.6837,
+              30.3197
+            ],
+            [
+              -95.6837,
+              30.4397
+            ],
+            [
+              -95.8037,
+              30.4397
+            ],
+            [
+              -95.8037,
+              30.3197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77362",
+        "neighborhood": "Pinehurst / Waller",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.9537,
+              30.0797
+            ],
+            [
+              -95.8537,
+              30.0797
+            ],
+            [
+              -95.8537,
+              30.1797
+            ],
+            [
+              -95.9537,
+              30.1797
+            ],
+            [
+              -95.9537,
+              30.0797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77365",
+        "neighborhood": "Porter",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1987,
+              30.0647
+            ],
+            [
+              -95.12870000000001,
+              30.0647
+            ],
+            [
+              -95.12870000000001,
+              30.1347
+            ],
+            [
+              -95.1987,
+              30.1347
+            ],
+            [
+              -95.1987,
+              30.0647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77373",
+        "neighborhood": "Spring Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4537,
+              30.0297
+            ],
+            [
+              -95.3937,
+              30.0297
+            ],
+            [
+              -95.3937,
+              30.0897
+            ],
+            [
+              -95.4537,
+              30.0897
+            ],
+            [
+              -95.4537,
+              30.0297
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77375",
+        "neighborhood": "Tomball Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6587,
+              30.0647
+            ],
+            [
+              -95.5887,
+              30.0647
+            ],
+            [
+              -95.5887,
+              30.1347
+            ],
+            [
+              -95.6587,
+              30.1347
+            ],
+            [
+              -95.6587,
+              30.0647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77377",
+        "neighborhood": "Tomball West / Hockley",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.7437,
+              30.0397
+            ],
+            [
+              -95.66369999999999,
+              30.0397
+            ],
+            [
+              -95.66369999999999,
+              30.119699999999998
+            ],
+            [
+              -95.7437,
+              30.119699999999998
+            ],
+            [
+              -95.7437,
+              30.0397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77379",
+        "neighborhood": "Spring / Klein",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5737,
+              29.9897
+            ],
+            [
+              -95.5137,
+              29.9897
+            ],
+            [
+              -95.5137,
+              30.0497
+            ],
+            [
+              -95.5737,
+              30.0497
+            ],
+            [
+              -95.5737,
+              29.9897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77380",
+        "neighborhood": "The Woodlands Town Center",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4987,
+              30.1347
+            ],
+            [
+              -95.4287,
+              30.1347
+            ],
+            [
+              -95.4287,
+              30.2047
+            ],
+            [
+              -95.4987,
+              30.2047
+            ],
+            [
+              -95.4987,
+              30.1347
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77381",
+        "neighborhood": "The Woodlands / Indian Springs",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.53869999999999,
+              30.1647
+            ],
+            [
+              -95.4687,
+              30.1647
+            ],
+            [
+              -95.4687,
+              30.2347
+            ],
+            [
+              -95.53869999999999,
+              30.2347
+            ],
+            [
+              -95.53869999999999,
+              30.1647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77382",
+        "neighborhood": "The Woodlands / Alden Bridge",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.56869999999999,
+              30.1447
+            ],
+            [
+              -95.4987,
+              30.1447
+            ],
+            [
+              -95.4987,
+              30.2147
+            ],
+            [
+              -95.56869999999999,
+              30.2147
+            ],
+            [
+              -95.56869999999999,
+              30.1447
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77383",
+        "neighborhood": "The Woodlands East",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4687,
+              30.1347
+            ],
+            [
+              -95.3987,
+              30.1347
+            ],
+            [
+              -95.3987,
+              30.2047
+            ],
+            [
+              -95.4687,
+              30.2047
+            ],
+            [
+              -95.4687,
+              30.1347
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77384",
+        "neighborhood": "The Woodlands / Creekside Park",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.61370000000001,
+              30.099700000000002
+            ],
+            [
+              -95.5337,
+              30.099700000000002
+            ],
+            [
+              -95.5337,
+              30.1797
+            ],
+            [
+              -95.61370000000001,
+              30.1797
+            ],
+            [
+              -95.61370000000001,
+              30.099700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77385",
+        "neighborhood": "The Woodlands / Panther Creek",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5437,
+              30.1097
+            ],
+            [
+              -95.46369999999999,
+              30.1097
+            ],
+            [
+              -95.46369999999999,
+              30.1897
+            ],
+            [
+              -95.5437,
+              30.1897
+            ],
+            [
+              -95.5437,
+              30.1097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77386",
+        "neighborhood": "Spring / The Woodlands Hills",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.56370000000001,
+              30.0897
+            ],
+            [
+              -95.4837,
+              30.0897
+            ],
+            [
+              -95.4837,
+              30.1697
+            ],
+            [
+              -95.56370000000001,
+              30.1697
+            ],
+            [
+              -95.56370000000001,
+              30.0897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77388",
+        "neighborhood": "Spring West / Klein",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5437,
+              29.979699999999998
+            ],
+            [
+              -95.4837,
+              29.979699999999998
+            ],
+            [
+              -95.4837,
+              30.0397
+            ],
+            [
+              -95.5437,
+              30.0397
+            ],
+            [
+              -95.5437,
+              29.979699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77389",
+        "neighborhood": "Spring / Louetta",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.58370000000001,
+              29.999699999999997
+            ],
+            [
+              -95.5237,
+              29.999699999999997
+            ],
+            [
+              -95.5237,
+              30.0597
+            ],
+            [
+              -95.58370000000001,
+              30.0597
+            ],
+            [
+              -95.58370000000001,
+              29.999699999999997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77406",
+        "neighborhood": "Richmond / Pecan Grove",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.78370000000001,
+              29.5197
+            ],
+            [
+              -95.7037,
+              29.5197
+            ],
+            [
+              -95.7037,
+              29.5997
+            ],
+            [
+              -95.78370000000001,
+              29.5997
+            ],
+            [
+              -95.78370000000001,
+              29.5197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77407",
+        "neighborhood": "Richmond / Telfair",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.7387,
+              29.5547
+            ],
+            [
+              -95.6687,
+              29.5547
+            ],
+            [
+              -95.6687,
+              29.6247
+            ],
+            [
+              -95.7387,
+              29.6247
+            ],
+            [
+              -95.7387,
+              29.5547
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77417",
+        "neighborhood": "Beasley / Needville Area",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.8237,
+              29.3097
+            ],
+            [
+              -95.72370000000001,
+              29.3097
+            ],
+            [
+              -95.72370000000001,
+              29.4097
+            ],
+            [
+              -95.8237,
+              29.4097
+            ],
+            [
+              -95.8237,
+              29.3097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77429",
+        "neighborhood": "Cypress Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6937,
+              29.979699999999998
+            ],
+            [
+              -95.6337,
+              29.979699999999998
+            ],
+            [
+              -95.6337,
+              30.0397
+            ],
+            [
+              -95.6937,
+              30.0397
+            ],
+            [
+              -95.6937,
+              29.979699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77433",
+        "neighborhood": "Cypress West / Fairfield",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.78869999999999,
+              29.9547
+            ],
+            [
+              -95.7187,
+              29.9547
+            ],
+            [
+              -95.7187,
+              30.0247
+            ],
+            [
+              -95.78869999999999,
+              30.0247
+            ],
+            [
+              -95.78869999999999,
+              29.9547
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77441",
+        "neighborhood": "Fulshear",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.9037,
+              29.639699999999998
+            ],
+            [
+              -95.8037,
+              29.639699999999998
+            ],
+            [
+              -95.8037,
+              29.7397
+            ],
+            [
+              -95.9037,
+              29.7397
+            ],
+            [
+              -95.9037,
+              29.639699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77447",
+        "neighborhood": "Hockley",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.9237,
+              30.0097
+            ],
+            [
+              -95.8237,
+              30.0097
+            ],
+            [
+              -95.8237,
+              30.1097
+            ],
+            [
+              -95.9237,
+              30.1097
+            ],
+            [
+              -95.9237,
+              30.0097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77449",
+        "neighborhood": "Katy Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.7737,
+              29.7697
+            ],
+            [
+              -95.7137,
+              29.7697
+            ],
+            [
+              -95.7137,
+              29.829700000000003
+            ],
+            [
+              -95.7737,
+              29.829700000000003
+            ],
+            [
+              -95.7737,
+              29.7697
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77450",
+        "neighborhood": "Katy / Cinco Ranch",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.7837,
+              29.709699999999998
+            ],
+            [
+              -95.7237,
+              29.709699999999998
+            ],
+            [
+              -95.7237,
+              29.7697
+            ],
+            [
+              -95.7837,
+              29.7697
+            ],
+            [
+              -95.7837,
+              29.709699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77461",
+        "neighborhood": "Needville",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.8037,
+              29.3397
+            ],
+            [
+              -95.6837,
+              29.3397
+            ],
+            [
+              -95.6837,
+              29.459699999999998
+            ],
+            [
+              -95.8037,
+              29.459699999999998
+            ],
+            [
+              -95.8037,
+              29.3397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77469",
+        "neighborhood": "Richmond Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.8037,
+              29.529700000000002
+            ],
+            [
+              -95.7237,
+              29.529700000000002
+            ],
+            [
+              -95.7237,
+              29.6097
+            ],
+            [
+              -95.8037,
+              29.6097
+            ],
+            [
+              -95.8037,
+              29.529700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77471",
+        "neighborhood": "Rosenberg",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.8537,
+              29.4997
+            ],
+            [
+              -95.75370000000001,
+              29.4997
+            ],
+            [
+              -95.75370000000001,
+              29.599700000000002
+            ],
+            [
+              -95.8537,
+              29.599700000000002
+            ],
+            [
+              -95.8537,
+              29.4997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77474",
+        "neighborhood": "Sealy",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -96.2237,
+              29.709699999999998
+            ],
+            [
+              -96.08370000000001,
+              29.709699999999998
+            ],
+            [
+              -96.08370000000001,
+              29.8497
+            ],
+            [
+              -96.2237,
+              29.8497
+            ],
+            [
+              -96.2237,
+              29.709699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77477",
+        "neighborhood": "Stafford",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.57870000000001,
+              29.594700000000003
+            ],
+            [
+              -95.5287,
+              29.594700000000003
+            ],
+            [
+              -95.5287,
+              29.6447
+            ],
+            [
+              -95.57870000000001,
+              29.6447
+            ],
+            [
+              -95.57870000000001,
+              29.594700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77484",
+        "neighborhood": "Waller",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -96.0337,
+              29.959699999999998
+            ],
+            [
+              -95.89370000000001,
+              29.959699999999998
+            ],
+            [
+              -95.89370000000001,
+              30.0997
+            ],
+            [
+              -96.0337,
+              30.0997
+            ],
+            [
+              -96.0337,
+              29.959699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77493",
+        "neighborhood": "Katy West / Brookshire",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.9037,
+              29.7997
+            ],
+            [
+              -95.82369999999999,
+              29.7997
+            ],
+            [
+              -95.82369999999999,
+              29.8797
+            ],
+            [
+              -95.9037,
+              29.8797
+            ],
+            [
+              -95.9037,
+              29.7997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77494",
+        "neighborhood": "Katy / Firethorne / Cross Creek",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.8287,
+              29.6747
+            ],
+            [
+              -95.7587,
+              29.6747
+            ],
+            [
+              -95.7587,
+              29.7447
+            ],
+            [
+              -95.8287,
+              29.7447
+            ],
+            [
+              -95.8287,
+              29.6747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77510",
+        "neighborhood": "Santa Fe",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.14370000000001,
+              29.3397
+            ],
+            [
+              -95.0637,
+              29.3397
+            ],
+            [
+              -95.0637,
+              29.4197
+            ],
+            [
+              -95.14370000000001,
+              29.4197
+            ],
+            [
+              -95.14370000000001,
+              29.3397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77511",
+        "neighborhood": "Alvin Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.28370000000001,
+              29.3797
+            ],
+            [
+              -95.2037,
+              29.3797
+            ],
+            [
+              -95.2037,
+              29.459699999999998
+            ],
+            [
+              -95.28370000000001,
+              29.459699999999998
+            ],
+            [
+              -95.28370000000001,
+              29.3797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77515",
+        "neighborhood": "Angleton",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4837,
+              29.1097
+            ],
+            [
+              -95.3637,
+              29.1097
+            ],
+            [
+              -95.3637,
+              29.229699999999998
+            ],
+            [
+              -95.4837,
+              29.229699999999998
+            ],
+            [
+              -95.4837,
+              29.1097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77523",
+        "neighborhood": "Baytown / Mont Belvieu",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.8737,
+              29.779700000000002
+            ],
+            [
+              -94.79369999999999,
+              29.779700000000002
+            ],
+            [
+              -94.79369999999999,
+              29.8597
+            ],
+            [
+              -94.8737,
+              29.8597
+            ],
+            [
+              -94.8737,
+              29.779700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77532",
+        "neighborhood": "Crosby",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1037,
+              29.8697
+            ],
+            [
+              -95.02369999999999,
+              29.8697
+            ],
+            [
+              -95.02369999999999,
+              29.9497
+            ],
+            [
+              -95.1037,
+              29.9497
+            ],
+            [
+              -95.1037,
+              29.8697
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77535",
+        "neighborhood": "Dayton",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.9737,
+              29.9897
+            ],
+            [
+              -94.8737,
+              29.9897
+            ],
+            [
+              -94.8737,
+              30.0897
+            ],
+            [
+              -94.9737,
+              30.0897
+            ],
+            [
+              -94.9737,
+              29.9897
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77539",
+        "neighborhood": "Dickinson",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1037,
+              29.4497
+            ],
+            [
+              -95.0437,
+              29.4497
+            ],
+            [
+              -95.0437,
+              29.509700000000002
+            ],
+            [
+              -95.1037,
+              29.509700000000002
+            ],
+            [
+              -95.1037,
+              29.4497
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77545",
+        "neighborhood": "Fresno / Rosharon",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.50370000000001,
+              29.4097
+            ],
+            [
+              -95.4237,
+              29.4097
+            ],
+            [
+              -95.4237,
+              29.4897
+            ],
+            [
+              -95.50370000000001,
+              29.4897
+            ],
+            [
+              -95.50370000000001,
+              29.4097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77547",
+        "neighborhood": "Galena Park",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2517,
+              29.7117
+            ],
+            [
+              -95.2157,
+              29.7117
+            ],
+            [
+              -95.2157,
+              29.747700000000002
+            ],
+            [
+              -95.2517,
+              29.747700000000002
+            ],
+            [
+              -95.2517,
+              29.7117
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77550",
+        "neighborhood": "Galveston East",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.8237,
+              29.2647
+            ],
+            [
+              -94.74369999999999,
+              29.2647
+            ],
+            [
+              -94.74369999999999,
+              29.3447
+            ],
+            [
+              -94.8237,
+              29.3447
+            ],
+            [
+              -94.8237,
+              29.2647
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77551",
+        "neighborhood": "Galveston West",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.9137,
+              29.2397
+            ],
+            [
+              -94.8337,
+              29.2397
+            ],
+            [
+              -94.8337,
+              29.319699999999997
+            ],
+            [
+              -94.9137,
+              29.319699999999997
+            ],
+            [
+              -94.9137,
+              29.2397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77554",
+        "neighborhood": "Galveston / Jamaica Beach",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.9937,
+              29.1797
+            ],
+            [
+              -94.91369999999999,
+              29.1797
+            ],
+            [
+              -94.91369999999999,
+              29.2597
+            ],
+            [
+              -94.9937,
+              29.2597
+            ],
+            [
+              -94.9937,
+              29.1797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77563",
+        "neighborhood": "Hitchcock",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0537,
+              29.3097
+            ],
+            [
+              -94.9737,
+              29.3097
+            ],
+            [
+              -94.9737,
+              29.389699999999998
+            ],
+            [
+              -95.0537,
+              29.389699999999998
+            ],
+            [
+              -95.0537,
+              29.3097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77565",
+        "neighborhood": "Kemah",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.04870000000001,
+              29.5197
+            ],
+            [
+              -94.9987,
+              29.5197
+            ],
+            [
+              -94.9987,
+              29.569699999999997
+            ],
+            [
+              -95.04870000000001,
+              29.569699999999997
+            ],
+            [
+              -95.04870000000001,
+              29.5197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77568",
+        "neighborhood": "La Marque",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0237,
+              29.329700000000003
+            ],
+            [
+              -94.94369999999999,
+              29.329700000000003
+            ],
+            [
+              -94.94369999999999,
+              29.4097
+            ],
+            [
+              -95.0237,
+              29.4097
+            ],
+            [
+              -95.0237,
+              29.329700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77572",
+        "neighborhood": "La Porte South",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0537,
+              29.6097
+            ],
+            [
+              -94.9937,
+              29.6097
+            ],
+            [
+              -94.9937,
+              29.669700000000002
+            ],
+            [
+              -95.0537,
+              29.669700000000002
+            ],
+            [
+              -95.0537,
+              29.6097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77578",
+        "neighborhood": "Manvel",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.39869999999999,
+              29.4247
+            ],
+            [
+              -95.3287,
+              29.4247
+            ],
+            [
+              -95.3287,
+              29.4947
+            ],
+            [
+              -95.39869999999999,
+              29.4947
+            ],
+            [
+              -95.39869999999999,
+              29.4247
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77583",
+        "neighborhood": "Rosharon",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.42370000000001,
+              29.3797
+            ],
+            [
+              -95.3437,
+              29.3797
+            ],
+            [
+              -95.3437,
+              29.459699999999998
+            ],
+            [
+              -95.42370000000001,
+              29.459699999999998
+            ],
+            [
+              -95.42370000000001,
+              29.3797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77586",
+        "neighborhood": "Seabrook",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0587,
+              29.5547
+            ],
+            [
+              -95.00869999999999,
+              29.5547
+            ],
+            [
+              -95.00869999999999,
+              29.604699999999998
+            ],
+            [
+              -95.0587,
+              29.604699999999998
+            ],
+            [
+              -95.0587,
+              29.5547
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77587",
+        "neighborhood": "South Houston",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2517,
+              29.6217
+            ],
+            [
+              -95.2157,
+              29.6217
+            ],
+            [
+              -95.2157,
+              29.657700000000002
+            ],
+            [
+              -95.2517,
+              29.657700000000002
+            ],
+            [
+              -95.2517,
+              29.6217
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77590",
+        "neighborhood": "Texas City Central",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.98370000000001,
+              29.349700000000002
+            ],
+            [
+              -94.9037,
+              29.349700000000002
+            ],
+            [
+              -94.9037,
+              29.4297
+            ],
+            [
+              -94.98370000000001,
+              29.4297
+            ],
+            [
+              -94.98370000000001,
+              29.349700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77591",
+        "neighborhood": "Texas City West",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0437,
+              29.329700000000003
+            ],
+            [
+              -94.96369999999999,
+              29.329700000000003
+            ],
+            [
+              -94.96369999999999,
+              29.4097
+            ],
+            [
+              -95.0437,
+              29.4097
+            ],
+            [
+              -95.0437,
+              29.329700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77598",
+        "neighborhood": "Webster / Clear Lake Shores",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.15870000000001,
+              29.5147
+            ],
+            [
+              -95.1087,
+              29.5147
+            ],
+            [
+              -95.1087,
+              29.5647
+            ],
+            [
+              -95.15870000000001,
+              29.5647
+            ],
+            [
+              -95.15870000000001,
+              29.5147
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77562",
+        "neighborhood": "Highlands",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0887,
+              29.7747
+            ],
+            [
+              -95.01870000000001,
+              29.7747
+            ],
+            [
+              -95.01870000000001,
+              29.8447
+            ],
+            [
+              -95.0887,
+              29.8447
+            ],
+            [
+              -95.0887,
+              29.7747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77327",
+        "neighborhood": "Cleveland",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0437,
+              30.299699999999998
+            ],
+            [
+              -94.9437,
+              30.299699999999998
+            ],
+            [
+              -94.9437,
+              30.3997
+            ],
+            [
+              -95.0437,
+              30.3997
+            ],
+            [
+              -95.0437,
+              30.299699999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77328",
+        "neighborhood": "Cleveland East",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.9937,
+              30.3397
+            ],
+            [
+              -94.89370000000001,
+              30.3397
+            ],
+            [
+              -94.89370000000001,
+              30.439700000000002
+            ],
+            [
+              -94.9937,
+              30.439700000000002
+            ],
+            [
+              -94.9937,
+              30.3397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77331",
+        "neighborhood": "Coldspring / San Jacinto Co",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2237,
+              30.4997
+            ],
+            [
+              -95.08370000000001,
+              30.4997
+            ],
+            [
+              -95.08370000000001,
+              30.6397
+            ],
+            [
+              -95.2237,
+              30.6397
+            ],
+            [
+              -95.2237,
+              30.4997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77360",
+        "neighborhood": "Onalaska / Livingston Area",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.19369999999999,
+              30.749699999999997
+            ],
+            [
+              -94.9937,
+              30.749699999999997
+            ],
+            [
+              -94.9937,
+              30.9497
+            ],
+            [
+              -95.19369999999999,
+              30.9497
+            ],
+            [
+              -95.19369999999999,
+              30.749699999999997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77357",
+        "neighborhood": "New Caney",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1987,
+              30.0747
+            ],
+            [
+              -95.12870000000001,
+              30.0747
+            ],
+            [
+              -95.12870000000001,
+              30.1447
+            ],
+            [
+              -95.1987,
+              30.1447
+            ],
+            [
+              -95.1987,
+              30.0747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77372",
+        "neighborhood": "Splendora",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.2137,
+              30.1497
+            ],
+            [
+              -95.13369999999999,
+              30.1497
+            ],
+            [
+              -95.13369999999999,
+              30.229699999999998
+            ],
+            [
+              -95.2137,
+              30.229699999999998
+            ],
+            [
+              -95.2137,
+              30.1497
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77363",
+        "neighborhood": "Plantersville",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.9537,
+              30.1997
+            ],
+            [
+              -95.8337,
+              30.1997
+            ],
+            [
+              -95.8337,
+              30.319699999999997
+            ],
+            [
+              -95.9537,
+              30.319699999999997
+            ],
+            [
+              -95.9537,
+              30.1997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77514",
+        "neighborhood": "Anahuac",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.77369999999999,
+              29.6997
+            ],
+            [
+              -94.6337,
+              29.6997
+            ],
+            [
+              -94.6337,
+              29.8397
+            ],
+            [
+              -94.77369999999999,
+              29.8397
+            ],
+            [
+              -94.77369999999999,
+              29.6997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77517",
+        "neighborhood": "Santa Fe / Alta Loma",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.1037,
+              29.3397
+            ],
+            [
+              -95.02369999999999,
+              29.3397
+            ],
+            [
+              -95.02369999999999,
+              29.4197
+            ],
+            [
+              -95.1037,
+              29.4197
+            ],
+            [
+              -95.1037,
+              29.3397
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77518",
+        "neighborhood": "Bacliff",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.0087,
+              29.4947
+            ],
+            [
+              -94.9587,
+              29.4947
+            ],
+            [
+              -94.9587,
+              29.5447
+            ],
+            [
+              -95.0087,
+              29.5447
+            ],
+            [
+              -95.0087,
+              29.4947
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77534",
+        "neighborhood": "Danbury",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.5737,
+              29.169700000000002
+            ],
+            [
+              -95.4537,
+              29.169700000000002
+            ],
+            [
+              -95.4537,
+              29.2897
+            ],
+            [
+              -95.5737,
+              29.2897
+            ],
+            [
+              -95.5737,
+              29.169700000000002
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77414",
+        "neighborhood": "Bay City",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -96.0037,
+              28.9197
+            ],
+            [
+              -95.86370000000001,
+              28.9197
+            ],
+            [
+              -95.86370000000001,
+              29.0597
+            ],
+            [
+              -96.0037,
+              29.0597
+            ],
+            [
+              -96.0037,
+              28.9197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77480",
+        "neighborhood": "Sweeny",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.7637,
+              28.9797
+            ],
+            [
+              -95.6437,
+              28.9797
+            ],
+            [
+              -95.6437,
+              29.0997
+            ],
+            [
+              -95.7637,
+              29.0997
+            ],
+            [
+              -95.7637,
+              28.9797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77422",
+        "neighborhood": "Brazoria",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.6337,
+              28.989700000000003
+            ],
+            [
+              -95.5137,
+              28.989700000000003
+            ],
+            [
+              -95.5137,
+              29.1097
+            ],
+            [
+              -95.6337,
+              29.1097
+            ],
+            [
+              -95.6337,
+              28.989700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77566",
+        "neighborhood": "Lake Jackson",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4837,
+              29.0097
+            ],
+            [
+              -95.3837,
+              29.0097
+            ],
+            [
+              -95.3837,
+              29.1097
+            ],
+            [
+              -95.4837,
+              29.1097
+            ],
+            [
+              -95.4837,
+              29.0097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77577",
+        "neighborhood": "Liverpool",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -95.4637,
+              29.2597
+            ],
+            [
+              -95.36370000000001,
+              29.2597
+            ],
+            [
+              -95.36370000000001,
+              29.3597
+            ],
+            [
+              -95.4637,
+              29.3597
+            ],
+            [
+              -95.4637,
+              29.2597
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77564",
+        "neighborhood": "Hull / Daisetta",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.79369999999999,
+              30.0197
+            ],
+            [
+              -94.6537,
+              30.0197
+            ],
+            [
+              -94.6537,
+              30.1597
+            ],
+            [
+              -94.79369999999999,
+              30.1597
+            ],
+            [
+              -94.79369999999999,
+              30.0197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77560",
+        "neighborhood": "Hankamer / Anahuac Area",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.7437,
+              29.7997
+            ],
+            [
+              -94.58370000000001,
+              29.7997
+            ],
+            [
+              -94.58370000000001,
+              29.959699999999998
+            ],
+            [
+              -94.7437,
+              29.959699999999998
+            ],
+            [
+              -94.7437,
+              29.7997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77575",
+        "neighborhood": "Liberty",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.7937,
+              29.989700000000003
+            ],
+            [
+              -94.6737,
+              29.989700000000003
+            ],
+            [
+              -94.6737,
+              30.1097
+            ],
+            [
+              -94.7937,
+              30.1097
+            ],
+            [
+              -94.7937,
+              29.989700000000003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77580",
+        "neighborhood": "Mont Belvieu",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.92869999999999,
+              29.8047
+            ],
+            [
+              -94.8587,
+              29.8047
+            ],
+            [
+              -94.8587,
+              29.8747
+            ],
+            [
+              -94.92869999999999,
+              29.8747
+            ],
+            [
+              -94.92869999999999,
+              29.8047
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ZCTA5CE20": "77597",
+        "neighborhood": "Wallisville",
+        "tier": "suburban"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.8037,
+              29.7497
+            ],
+            [
+              -94.6837,
+              29.7497
+            ],
+            [
+              -94.6837,
+              29.869699999999998
+            ],
+            [
+              -94.8037,
+              29.869699999999998
+            ],
+            [
+              -94.8037,
+              29.7497
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
