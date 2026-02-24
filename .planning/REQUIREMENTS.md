@@ -57,7 +57,7 @@
 - [x] **ADMIN-05**: Admin can see partial applications with contact info + step reached
 - [x] **ADMIN-06**: Admin can configure seat caps per role per ZIP
 - [x] **ADMIN-07**: Admin can set phantom fill count per ZIP (inflate perceived demand)
-- [ ] **ADMIN-08**: Admin can view ZIP demand heat map of Houston
+- [x] **ADMIN-08**: Admin can view ZIP demand heat map of Houston
 - [x] **ADMIN-09**: Admin can view revenue tracking (total collected, refunds, count by status)
 
 ### Analytics
@@ -138,7 +138,7 @@
 | ADMIN-05 | Phase 5 | Complete |
 | ADMIN-06 | Phase 6 | Complete |
 | ADMIN-07 | Phase 6 | Complete |
-| ADMIN-08 | Phase 6 | Pending |
+| ADMIN-08 | Phase 6 | Complete |
 | ADMIN-09 | Phase 6 | Complete |
 | ANLY-01 | Phase 6 | Complete |
 | ANLY-02 | Phase 6 | Complete |

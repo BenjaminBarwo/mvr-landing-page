@@ -44,6 +44,7 @@ Progress: [████████░░] 80% (Phase 6 in progress)
 | Phase 05-admin-application-queue-email-infrastructure P02 | 5 min | 2 tasks | 6 files |
 | Phase 06-scarcity-controls-and-analytics P02 | 2 | 2 tasks | 6 files |
 | Phase 06-scarcity-controls-and-analytics P01 | 7 | 2 tasks | 5 files |
+| Phase 06-scarcity-controls-and-analytics P03 | 12 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -85,6 +86,9 @@ Recent decisions affecting current work:
 - [Phase 06-01]: TanStack TableMeta extended with updateData typed interface — avoids any-casting in column cells
 - [Phase 06-01]: Prisma db execute with direct DB connection (db.PROJECT_REF.supabase.co:5432) required for DDL — pgbouncer pooler rejects DDL statements
 - [Phase 06-01]: resetCapsByTier batches upserts in chunks of 50 to avoid payload limits for 200+ ZIP records
+- [Phase 06-scarcity-controls-and-analytics]: Census TIGER ZCTA API 404 — used approximate rectangular polygons for Houston ZIP GeoJSON
+- [Phase 06-scarcity-controls-and-analytics]: AdminNav extracted as client component — keeps layout server component with auth guard intact
+- [Phase 06-scarcity-controls-and-analytics]: SeatCheckerRealtime refetches API on Realtime event — ensures seatsRemaining includes claimed_count from applications
 
 ### Pending Todos
 
