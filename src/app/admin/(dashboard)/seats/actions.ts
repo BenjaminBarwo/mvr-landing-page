@@ -187,24 +187,23 @@ export async function resetCapsByTier(
     return { error: "Failed to fetch seat rows" }
   }
 
-  // Update each row with the default cap for its tier
-  const updates = rows.map((row) => ({
-    id: row.id,
-    total_cap: caps[row.tier as keyof typeof caps] ?? caps.standard,
-  }))
+  // Group rows by tier, then batch-update each tier group
+  const rowsByTier: Record<string, string[]> = {}
+  for (const row of rows) {
+    const tier = row.tier as string
+    if (!rowsByTier[tier]) rowsByTier[tier] = []
+    rowsByTier[tier].push(row.id)
+  }
 
-  // Batch update in chunks of 50 to avoid payload limits
-  const chunkSize = 50
-  for (let i = 0; i < updates.length; i += chunkSize) {
-    const chunk = updates.slice(i, i + chunkSize)
-
-    // Upsert with update only (no insert needed, rows already exist)
-    const { error: upsertError } = await supabaseAdmin
+  for (const [tier, ids] of Object.entries(rowsByTier)) {
+    const defaultCap = caps[tier] ?? caps.standard
+    const { error: updateError } = await supabaseAdmin
       .from("zip_seats")
-      .upsert(chunk, { onConflict: "id" })
+      .update({ total_cap: defaultCap })
+      .in("id", ids)
 
-    if (upsertError) {
-      console.error("[admin/seats] Failed to reset caps for chunk:", upsertError)
+    if (updateError) {
+      console.error("[admin/seats] Failed to reset caps for tier:", tier, updateError)
       return { error: "Failed to reset seat caps" }
     }
   }
