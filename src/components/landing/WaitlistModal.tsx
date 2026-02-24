@@ -517,10 +517,43 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
               />
             </Elements>
           ) : (
-            <div style={{ marginTop: 40 }}>
+            <div style={{ marginTop: 40, textAlign: "center" }}>
               <p style={{ fontWeight: 300, fontSize: 16, color: "#666" }}>
-                Preparing payment...
+                {state.error || "Preparing payment..."}
               </p>
+              {state.error && (
+                <div style={{ marginTop: 20 }}>
+                  <SubmitButton
+                    disabled={state.submitting}
+                    label="Retry"
+                    onClick={async () => {
+                      dispatch({ type: "START_SUBMIT" });
+                      try {
+                        const piRes = await fetch("/api/reservation/create-payment-intent", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ sessionId: state.sessionId }),
+                        });
+                        if (piRes.ok) {
+                          const piData = await piRes.json();
+                          dispatch({ type: "PAYMENT_INTENT_READY", clientSecret: piData.clientSecret });
+                        } else {
+                          const errData = await piRes.json().catch(() => ({}));
+                          dispatch({
+                            type: "SUBMIT_ERROR",
+                            error: errData.error || "Failed to initialize payment.",
+                          });
+                        }
+                      } catch {
+                        dispatch({ type: "SUBMIT_ERROR", error: "Network error. Please try again." });
+                      }
+                    }}
+                  />
+                  <div style={{ marginTop: 16 }}>
+                    <BackLink onClick={() => dispatch({ type: "SET_STEP", step: 3 })} />
+                  </div>
+                </div>
+              )}
             </div>
           )
         )}
