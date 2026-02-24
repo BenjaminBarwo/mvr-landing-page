@@ -55,8 +55,8 @@
 - [x] **ADMIN-03**: Admin can view individual application detail (all fields + payment status)
 - [x] **ADMIN-04**: Admin can approve, reject, or waitlist an application (triggers email)
 - [x] **ADMIN-05**: Admin can see partial applications with contact info + step reached
-- [ ] **ADMIN-06**: Admin can configure seat caps per role per ZIP
-- [ ] **ADMIN-07**: Admin can set phantom fill count per ZIP (inflate perceived demand)
+- [x] **ADMIN-06**: Admin can configure seat caps per role per ZIP
+- [x] **ADMIN-07**: Admin can set phantom fill count per ZIP (inflate perceived demand)
 - [ ] **ADMIN-08**: Admin can view ZIP demand heat map of Houston
 - [x] **ADMIN-09**: Admin can view revenue tracking (total collected, refunds, count by status)
 
@@ -136,8 +136,8 @@
 | ADMIN-03 | Phase 5 | Complete |
 | ADMIN-04 | Phase 5 | Complete |
 | ADMIN-05 | Phase 5 | Complete |
-| ADMIN-06 | Phase 6 | Pending |
-| ADMIN-07 | Phase 6 | Pending |
+| ADMIN-06 | Phase 6 | Complete |
+| ADMIN-07 | Phase 6 | Complete |
 | ADMIN-08 | Phase 6 | Pending |
 | ADMIN-09 | Phase 6 | Complete |
 | ANLY-01 | Phase 6 | Complete |

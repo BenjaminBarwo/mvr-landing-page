@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-02-19)
 
 **Core value:** Prove ZIP-level demand density and pricing elasticity through real activation willingness at $100 — clean economic signal, not vanity volume
-**Current focus:** Phase 6 in progress — 06-02 (analytics dashboard) complete
+**Current focus:** Phase 6 in progress — 06-01 and 06-02 complete; 06-03 pending
 
 ## Current Position
 
 Phase: 6 of 6 in progress (Scarcity Controls and Analytics)
-Plan: 2 of 3 complete (06-02 analytics dashboard done; 06-01 seats table and 06-03 pending)
-Status: Phase 6 Plan 02 complete — analytics dashboard with KPI cards, funnel steps, and page visit tracking
-Last activity: 2026-02-24 — Phase 6 Plan 02 executed: /admin/analytics, PageViewTracker, POST /api/track/visit
+Plan: 2 of 3 complete (06-01 seat controls and 06-02 analytics dashboard done; 06-03 pending)
+Status: Phase 6 Plans 01 and 02 complete — seat controls page with inline editing and analytics dashboard operational
+Last activity: 2026-02-24 — Phase 6 Plan 01 executed: /admin/seats, migration 004, seat controls with TanStack Table
 
 Progress: [████████░░] 80% (Phase 6 in progress)
 
@@ -43,6 +43,7 @@ Progress: [████████░░] 80% (Phase 6 in progress)
 | Phase 05-admin-application-queue-email-infrastructure P01 | 42 min | 2 tasks | 20 files |
 | Phase 05-admin-application-queue-email-infrastructure P02 | 5 min | 2 tasks | 6 files |
 | Phase 06-scarcity-controls-and-analytics P02 | 2 | 2 tasks | 6 files |
+| Phase 06-scarcity-controls-and-analytics P01 | 7 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,9 @@ Recent decisions affecting current work:
 - [Phase 06-scarcity-controls-and-analytics]: Vertical step cards for funnel visualization — zero chart library dependencies, dark admin aesthetic match
 - [Phase 06-scarcity-controls-and-analytics]: Refund proxy: COUNT WHERE status=rejected AND stripe_payment_status=succeeded — no refunded_at column for MVP
 - [Phase 06-scarcity-controls-and-analytics]: Date range filter as URL searchParams links — bookmarkable, server-side filtering, no client JS
+- [Phase 06-01]: TanStack TableMeta extended with updateData typed interface — avoids any-casting in column cells
+- [Phase 06-01]: Prisma db execute with direct DB connection (db.PROJECT_REF.supabase.co:5432) required for DDL — pgbouncer pooler rejects DDL statements
+- [Phase 06-01]: resetCapsByTier batches upserts in chunks of 50 to avoid payload limits for 200+ ZIP records
 
 ### Pending Todos
 
@@ -99,5 +103,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 06-02-PLAN.md — analytics dashboard complete. Next: 06-01 (seats table) and 06-03 (demand map / nav links).
+Stopped at: Completed 06-01-PLAN.md — seat controls page with inline editing, migration 004, Realtime publication. Next: 06-03 (demand map / nav links).
 Resume file: None
