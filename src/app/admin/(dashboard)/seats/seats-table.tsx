@@ -50,6 +50,8 @@ export function SeatsTable({ initialData, currentRole }: SeatsTableProps) {
   const router = useRouter()
   const [data, setData] = useState<ZipSeatRow[]>(initialData)
   const [, startTransition] = useTransition()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
 
   // Sync local state when server data changes (e.g. after router.refresh)
   useEffect(() => {
@@ -169,22 +171,24 @@ export function SeatsTable({ initialData, currentRole }: SeatsTableProps) {
     <div className="space-y-4">
       {/* Role selector + row count */}
       <div className="flex items-center gap-4">
-        <Select value={currentRole} onValueChange={handleRoleChange}>
-          <SelectTrigger className="w-[200px] bg-gray-900 border-gray-700 text-white">
-            <SelectValue placeholder="Select role" />
-          </SelectTrigger>
-          <SelectContent className="bg-gray-900 border-gray-700">
-            {ROLE_OPTIONS.map((opt) => (
-              <SelectItem
-                key={opt.value}
-                value={opt.value}
-                className="text-white hover:bg-gray-800 focus:bg-gray-800"
-              >
-                {opt.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        {mounted && (
+          <Select value={currentRole} onValueChange={handleRoleChange}>
+            <SelectTrigger className="w-[200px] bg-gray-900 border-gray-700 text-white">
+              <SelectValue placeholder="Select role" />
+            </SelectTrigger>
+            <SelectContent className="bg-gray-900 border-gray-700">
+              {ROLE_OPTIONS.map((opt) => (
+                <SelectItem
+                  key={opt.value}
+                  value={opt.value}
+                  className="text-white hover:bg-gray-800 focus:bg-gray-800"
+                >
+                  {opt.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        )}
 
         <span className="text-sm text-gray-500">
           {data.length} ZIP code{data.length !== 1 ? "s" : ""} for{" "}

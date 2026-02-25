@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useTransition } from "react"
+import { useState, useCallback, useTransition, useEffect } from "react"
 import { useRouter, usePathname } from "next/navigation"
 import {
   useReactTable,
@@ -82,6 +82,8 @@ export function ApplicationsDataTable({
   const [selectedApp, setSelectedApp] = useState<Application | null>(null)
   const [searchValue, setSearchValue] = useState(currentSearch)
   const [, startTransition] = useTransition()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
 
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize))
 
@@ -184,25 +186,27 @@ export function ApplicationsDataTable({
           onChange={(e) => handleSearchChange(e.target.value)}
           className="max-w-sm bg-gray-900 border-gray-700 text-white placeholder:text-gray-500"
         />
-        <Select
-          value={currentRole || "all"}
-          onValueChange={handleRoleChange}
-        >
-          <SelectTrigger className="w-[180px] bg-gray-900 border-gray-700 text-white">
-            <SelectValue placeholder="All Roles" />
-          </SelectTrigger>
-          <SelectContent className="bg-gray-900 border-gray-700">
-            {ROLE_OPTIONS.map((opt) => (
-              <SelectItem
-                key={opt.value}
-                value={opt.value}
-                className="text-white hover:bg-gray-800 focus:bg-gray-800"
-              >
-                {opt.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        {mounted && (
+          <Select
+            value={currentRole || "all"}
+            onValueChange={handleRoleChange}
+          >
+            <SelectTrigger className="w-[180px] bg-gray-900 border-gray-700 text-white">
+              <SelectValue placeholder="All Roles" />
+            </SelectTrigger>
+            <SelectContent className="bg-gray-900 border-gray-700">
+              {ROLE_OPTIONS.map((opt) => (
+                <SelectItem
+                  key={opt.value}
+                  value={opt.value}
+                  className="text-white hover:bg-gray-800 focus:bg-gray-800"
+                >
+                  {opt.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        )}
         <span className="text-sm text-gray-500 ml-auto">
           {totalCount} application{totalCount !== 1 ? "s" : ""}
         </span>
