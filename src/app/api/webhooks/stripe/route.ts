@@ -3,8 +3,9 @@ import { stripe } from '@/lib/stripe'
 import { supabaseAdmin } from '@/lib/supabase/admin'
 import { sendEmail } from '@/lib/email'
 import Stripe from 'stripe'
+import { env } from '@/env'
 
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
+const webhookSecret = env.STRIPE_WEBHOOK_SECRET
 
 export async function POST(request: NextRequest) {
   // CRITICAL: Read body as text — NEVER use request.json() (destroys signature verification)

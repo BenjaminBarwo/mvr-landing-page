@@ -1026,7 +1026,7 @@ function Step4Payment({
       </h2>
       <p
         style={{
-          width: 340,
+          width: 370,
           margin: "0 auto",
           fontWeight: 300,
           fontSize: 16,
@@ -1038,8 +1038,17 @@ function Step4Payment({
         $100 activation credit &mdash; applied to your first month.
       </p>
 
-      <form onSubmit={handlePayment} style={{ margin: "32px auto 0", width: 340, textAlign: "left" }}>
-        <div style={{ marginBottom: 24 }}>
+      <form onSubmit={handlePayment} style={{ margin: "28px auto 0", maxWidth: 400, width: "100%", textAlign: "left" }}>
+        {/* Payment element card */}
+        <div
+          style={{
+            background: "#fafafa",
+            border: "1px solid #e8e8e8",
+            borderRadius: 12,
+            padding: "20px 18px",
+            marginBottom: 20,
+          }}
+        >
           <PaymentElement />
         </div>
 
@@ -1050,22 +1059,23 @@ function Step4Payment({
             alignItems: "flex-start",
             gap: 10,
             cursor: "pointer",
-            marginBottom: 24,
+            marginBottom: 20,
+            padding: "0 2px",
           }}
         >
           <input
             type="checkbox"
             checked={termsAccepted}
             onChange={(e) => setTermsAccepted(e.target.checked)}
-            style={{ marginTop: 4, width: 16, height: 16, accentColor: "#222" }}
+            style={{ marginTop: 3, width: 16, height: 16, accentColor: "#222", flexShrink: 0 }}
           />
-          <span style={{ fontSize: 13, fontWeight: 300, color: "#666", lineHeight: 1.6 }}>
+          <span style={{ fontSize: 13, fontWeight: 300, color: "#888", lineHeight: 1.5 }}>
             I agree to the{" "}
             <a
               href="/terms"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#222", textUnderlineOffset: 3 }}
+              style={{ color: "#555", fontWeight: 400, textUnderlineOffset: 3 }}
               onClick={(e) => e.stopPropagation()}
             >
               founding seat terms
@@ -1076,12 +1086,12 @@ function Step4Payment({
         </label>
 
         {state.error && (
-          <p style={{ fontSize: 14, color: "#c44040", marginBottom: 20, fontWeight: 300, lineHeight: 2 }}>
+          <p style={{ fontSize: 14, color: "#c44040", marginBottom: 16, fontWeight: 300, lineHeight: 1.6, padding: "0 2px" }}>
             {state.error}
           </p>
         )}
 
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", marginTop: 4 }}>
           <SubmitButton
             disabled={!termsAccepted || state.paymentStatus === "processing" || !stripeHook}
             label={
