@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import { stripe } from "@/lib/stripe";
+import { sendEmail } from "@/lib/email";
 
 const confirmSchema = z.object({
   sessionId: z.string().uuid(),
@@ -28,7 +29,7 @@ export async function POST(request: Request) {
   // Find application by session
   const { data: app, error: appError } = await supabaseAdmin
     .from("applications")
-    .select("id, primary_zip, stripe_payment_intent_id, status")
+    .select("id, primary_zip, stripe_payment_intent_id, status, name, email, role")
     .eq("session_id", sessionId)
     .single();
 
@@ -73,6 +74,17 @@ export async function POST(request: Request) {
     );
   }
 
+  // Insert status history
+  await supabaseAdmin
+    .from("application_status_history")
+    .insert({
+      application_id: app.id,
+      from_status: "draft",
+      to_status: "submitted",
+      changed_by: null,
+      reason: "Payment confirmed via client-side verification",
+    });
+
   // Insert application_zips
   if (app.primary_zip) {
     await supabaseAdmin
@@ -85,6 +97,25 @@ export async function POST(request: Request) {
         },
         { onConflict: "application_id,zip_code" }
       );
+  }
+
+  // Send confirmation email (non-fatal — don't block response)
+  if (app.email) {
+    try {
+      await sendEmail({
+        applicationId: app.id,
+        emailType: "confirmation",
+        application: {
+          firstName: app.name || "",
+          email: app.email,
+          role: app.role || "",
+          primary_zip: app.primary_zip || "",
+          amountPaid: "$100",
+        },
+      });
+    } catch (emailErr) {
+      console.error("Confirmation email failed (non-fatal):", emailErr);
+    }
   }
 
   return NextResponse.json({ success: true });
