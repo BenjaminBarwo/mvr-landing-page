@@ -54,26 +54,39 @@ export async function POST(request: Request) {
   }
 
   // Create new PaymentIntent
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: 10000, // $100.00
-    currency: "usd",
-    metadata: {
-      application_id: app.id,
-      session_id: sessionId,
-      email: app.email,
-      role: app.role,
-      zip_code: app.primary_zip ?? "",
-    },
-  });
+  let paymentIntent;
+  try {
+    paymentIntent = await stripe.paymentIntents.create({
+      amount: 10000, // $100.00
+      currency: "usd",
+      metadata: {
+        application_id: app.id,
+        session_id: sessionId,
+        email: app.email,
+        role: app.role,
+        zip_code: app.primary_zip ?? "",
+      },
+    });
+  } catch (err) {
+    console.error("Stripe paymentIntents.create failed:", err);
+    return NextResponse.json(
+      { error: "Payment service unavailable. Please try again." },
+      { status: 502 }
+    );
+  }
 
   // Update application with PI ID
-  await supabaseAdmin
+  const { error: updateError } = await supabaseAdmin
     .from("applications")
     .update({
       stripe_payment_intent_id: paymentIntent.id,
       payment_amount_cents: 10000,
     })
     .eq("id", app.id);
+
+  if (updateError) {
+    console.error("Failed to save payment intent to application:", updateError);
+  }
 
   return NextResponse.json({ clientSecret: paymentIntent.client_secret });
 }

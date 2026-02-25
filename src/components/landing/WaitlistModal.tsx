@@ -298,6 +298,37 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     }
   }
 
+  /* ── Create payment intent ── */
+  const createPaymentIntent = useCallback(async (sessionId: string) => {
+    dispatch({ type: "START_SUBMIT" });
+    try {
+      const piRes = await fetch("/api/reservation/create-payment-intent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId }),
+      });
+      if (piRes.ok) {
+        const piData = await piRes.json();
+        dispatch({ type: "PAYMENT_INTENT_READY", clientSecret: piData.clientSecret });
+      } else {
+        const errData = await piRes.json().catch(() => ({}));
+        dispatch({
+          type: "SUBMIT_ERROR",
+          error: errData.error || "Failed to initialize payment. Please try again.",
+        });
+      }
+    } catch {
+      dispatch({ type: "SUBMIT_ERROR", error: "Network error. Please try again." });
+    }
+  }, []);
+
+  /* ── Auto-create PI when step 4 loads without clientSecret ── */
+  useEffect(() => {
+    if (state.step === 4 && !state.clientSecret && !state.submitting && !state.error && state.sessionId) {
+      createPaymentIntent(state.sessionId);
+    }
+  }, [state.step, state.clientSecret, state.submitting, state.error, state.sessionId, createPaymentIntent]);
+
   /* ── Step 3: Submit business questions ── */
   async function handleStep3Submit(e: React.FormEvent) {
     e.preventDefault();
@@ -325,24 +356,8 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
         return;
       }
 
+      // Move to step 4 — useEffect will handle PI creation
       dispatch({ type: "STEP3_SUCCESS" });
-
-      // Create payment intent
-      const piRes = await fetch("/api/reservation/create-payment-intent", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sessionId: state.sessionId }),
-      });
-
-      if (piRes.ok) {
-        const piData = await piRes.json();
-        dispatch({ type: "PAYMENT_INTENT_READY", clientSecret: piData.clientSecret });
-      } else {
-        dispatch({
-          type: "SUBMIT_ERROR",
-          error: "Failed to initialize payment. Please try again.",
-        });
-      }
     } catch {
       dispatch({ type: "SUBMIT_ERROR", error: "Network error. Please try again." });
     }
@@ -526,28 +541,7 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                   <SubmitButton
                     disabled={state.submitting}
                     label="Retry"
-                    onClick={async () => {
-                      dispatch({ type: "START_SUBMIT" });
-                      try {
-                        const piRes = await fetch("/api/reservation/create-payment-intent", {
-                          method: "POST",
-                          headers: { "Content-Type": "application/json" },
-                          body: JSON.stringify({ sessionId: state.sessionId }),
-                        });
-                        if (piRes.ok) {
-                          const piData = await piRes.json();
-                          dispatch({ type: "PAYMENT_INTENT_READY", clientSecret: piData.clientSecret });
-                        } else {
-                          const errData = await piRes.json().catch(() => ({}));
-                          dispatch({
-                            type: "SUBMIT_ERROR",
-                            error: errData.error || "Failed to initialize payment.",
-                          });
-                        }
-                      } catch {
-                        dispatch({ type: "SUBMIT_ERROR", error: "Network error. Please try again." });
-                      }
-                    }}
+                    onClick={() => createPaymentIntent(state.sessionId)}
                   />
                   <div style={{ marginTop: 16 }}>
                     <BackLink onClick={() => dispatch({ type: "SET_STEP", step: 3 })} />
