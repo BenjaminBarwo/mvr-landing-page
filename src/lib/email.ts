@@ -101,9 +101,9 @@ export async function sendEmail({
   try {
     const result = await resend.emails.send(
       {
-        from: 'MVR Team <team@yourdomain.com>',
+        from: 'MVR Team <team@mvrfounding.com>',
         to: [application.email],
-        replyTo: 'support@yourdomain.com',
+        replyTo: 'support@mvrfounding.com',
         subject,
         react,
       },
