@@ -969,6 +969,19 @@ function Step4Payment({
   const stripeHook = useStripe();
   const elements = useElements();
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [stripeBlocked, setStripeBlocked] = useState(false);
+
+  // Detect ad blocker: if Stripe hasn't loaded after a delay, it's likely blocked
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!stripeHook) setStripeBlocked(true);
+    }, 4000);
+    if (stripeHook) {
+      setStripeBlocked(false);
+      clearTimeout(timer);
+    }
+    return () => clearTimeout(timer);
+  }, [stripeHook]);
 
   const handlePayment = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -1037,6 +1050,25 @@ function Step4Payment({
       >
         $100 activation credit &mdash; applied to your first month.
       </p>
+
+      {stripeBlocked && (
+        <div
+          style={{
+            margin: "20px auto 0",
+            maxWidth: 400,
+            padding: "14px 16px",
+            background: "#FFF8E1",
+            border: "1px solid #F0D060",
+            borderRadius: 10,
+            fontSize: 14,
+            fontWeight: 300,
+            lineHeight: 1.6,
+            color: "#6B5900",
+          }}
+        >
+          Your ad blocker is preventing the payment form from loading. Please disable it for this page and refresh to continue.
+        </div>
+      )}
 
       <form onSubmit={handlePayment} style={{ margin: "28px auto 0", maxWidth: 400, width: "100%", textAlign: "left" }}>
         {/* Payment element card */}
