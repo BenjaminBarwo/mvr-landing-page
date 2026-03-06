@@ -93,7 +93,7 @@ export function ApprovalEmail({ firstName, role, zip }: ApprovalEmailProps) {
       </Text>
 
       <Text style={textStyle}>
-        Congratulations — you&apos;ve secured your founding seat for the {formatRole(role)} role in ZIP {zip}. We&apos;re genuinely excited to have you in this first cohort.
+        Congratulations — you&apos;ve secured your founding seat for the {formatRole(role)} role in ZIP {zip}. We&apos;re genuinely excited to have you in the founding group.
       </Text>
 
       <div style={detailsBoxStyle}>
@@ -116,7 +116,7 @@ export function ApprovalEmail({ firstName, role, zip }: ApprovalEmailProps) {
       <Text style={subheadingStyle}>In the meantime</Text>
 
       <Text style={textStyle}>
-        If there&apos;s a colleague in your market who should know about founding seats before they&apos;re gone, feel free to pass this along. We&apos;re keeping the cohort intentionally small.
+        If there&apos;s a colleague in your market who should know about founding seats before they&apos;re gone, feel free to pass this along. We&apos;re keeping the group intentionally small.
       </Text>
 
       <Hr style={hrStyle} />

@@ -47,8 +47,8 @@ export function CoFounderCard() {
               bottom: -2,
               left: 0,
               right: 0,
-              height: "40%",
-              background: "linear-gradient(to bottom, transparent 0%, #f5f5f5 70%)",
+              height: "60%",
+              background: "linear-gradient(to bottom, transparent 0%, #f2f3f5 70%)",
               pointerEvents: "none",
             }}
           />

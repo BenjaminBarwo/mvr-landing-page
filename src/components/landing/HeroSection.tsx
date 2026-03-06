@@ -1,16 +1,17 @@
 "use client";
 
 import { useEffect, useState, useCallback, useRef } from "react";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 interface HeroSectionProps {
   onOpenWaitlist: () => void;
 }
 
 const roles = [
-  "agents",
+  "realtors",
   "lenders",
+  "insurance agents",
   "inspectors",
-  "title companies",
   "appraisers",
   "contractors",
 ];
@@ -18,6 +19,7 @@ const roles = [
 type Phase = "typing" | "pausing" | "erasing";
 
 export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
+  const width = useWindowWidth();
   const [wordIndex, setWordIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("typing");
   const [measuredWidth, setMeasuredWidth] = useState(0);
@@ -78,6 +80,8 @@ export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
   }, [phase, measuredWidth, charCount]);
 
   const containerAnim = getContainerStyle();
+  const heroFontSize = width < 640 ? 28 : 40;
+  const heroLineHeight = width < 640 ? 1.4 : 1.6;
 
   return (
     <>
@@ -89,7 +93,7 @@ export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
         100% { transform: scale(1.2, 1.4); opacity: 0; }
       }
     `}</style>
-    <section
+    <div
       style={{
         display: "flex",
         flexDirection: "column",
@@ -133,7 +137,7 @@ export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: "140px 0 140px",
+          padding: "40px 0 20px",
           width: "100%",
         }}
       >
@@ -142,13 +146,11 @@ export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
           style={{
             letterSpacing: "-1px",
             fontWeight: 300,
-            lineHeight: 1.6,
-            fontSize: 40,
+            lineHeight: heroLineHeight,
+            fontSize: heroFontSize,
             color: "#222",
             position: "relative",
-            maxWidth: "90%",
-            margin: "0 auto",
-            width: 500,
+            textAlign: "center",
           }}
         >
           Houston&apos;s first platform for
@@ -159,13 +161,11 @@ export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
           style={{
             letterSpacing: "-1px",
             fontWeight: 300,
-            lineHeight: 1.6,
-            fontSize: 40,
+            lineHeight: heroLineHeight,
+            fontSize: heroFontSize,
             color: "#222",
             position: "relative",
-            maxWidth: "90%",
-            margin: "0 auto",
-            width: 500,
+            textAlign: "center",
           }}
         >
           {/* Hidden measurement span — renders current word offscreen to get pixel width */}
@@ -307,7 +307,7 @@ export function HeroSection({ onOpenWaitlist }: HeroSectionProps) {
           Secure your ZIP before launch.
         </p>
       </div>
-    </section>
+    </div>
     </>
   );
 }

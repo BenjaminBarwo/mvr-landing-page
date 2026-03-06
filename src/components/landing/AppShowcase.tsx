@@ -31,22 +31,13 @@ export function AppShowcase() {
         100% { transform: scale(1.8); opacity: 0; }
       }
     `}</style>
-    <section
+    <div
       style={{
-        maxWidth: 1200,
-        margin: "0 auto",
-        padding: "0 24px 60px",
+        position: "relative",
+        width: "100%",
+        height: "100%",
       }}
     >
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          borderRadius: 12,
-          overflow: "hidden",
-          boxShadow: "0 20px 60px -12px rgba(0,0,0,0.15)",
-        }}
-      >
         {hasVideo ? (
           <>
             <video
@@ -58,8 +49,9 @@ export function AppShowcase() {
               playsInline
               style={{
                 width: "100%",
-                height: "auto",
+                height: "100%",
                 display: "block",
+                objectFit: "cover",
               }}
             />
 
@@ -138,7 +130,7 @@ export function AppShowcase() {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              aspectRatio: "16 / 9",
+              height: "100%",
               gap: 12,
               color: "#B2B2B2",
               background: "#e8e9eb",
@@ -160,8 +152,7 @@ export function AppShowcase() {
             </span>
           </div>
         )}
-      </div>
-    </section>
+    </div>
     </>
   );
 }

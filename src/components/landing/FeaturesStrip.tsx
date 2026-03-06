@@ -94,7 +94,7 @@ export function FeaturesStrip() {
           width: 500,
         }}
       >
-        The MVR difference
+        The difference
       </h2>
 
       {/* Features container — matching reference .features */}

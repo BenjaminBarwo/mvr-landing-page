@@ -3,10 +3,14 @@ import {
   Head,
   Body,
   Container,
+  Img,
   Text,
   Link,
   Hr,
+  Section,
 } from '@react-email/components'
+
+const BASE_URL = 'https://mvrfounding.com'
 
 interface EmailLayoutProps {
   children: React.ReactNode
@@ -25,13 +29,26 @@ const containerStyle = {
   padding: '48px 0 40px',
 }
 
-const logoStyle = {
-  fontSize: '28px',
-  fontWeight: '300' as const,
-  letterSpacing: '-1px',
-  color: '#222222',
+const headerStyle = {
   textAlign: 'center' as const,
   margin: '0 0 32px 0',
+}
+
+const logoImgStyle = {
+  width: '48px',
+  height: '48px',
+  borderRadius: '12px',
+  margin: '0 auto 12px auto',
+  display: 'block' as const,
+}
+
+const logoTextStyle = {
+  fontSize: '20px',
+  fontWeight: '600' as const,
+  letterSpacing: '-0.5px',
+  color: '#222222',
+  textAlign: 'center' as const,
+  margin: '0',
 }
 
 const cardStyle = {
@@ -49,6 +66,32 @@ const footerHrStyle = {
 const footerStyle = {
   textAlign: 'center' as const,
   padding: '28px 0 0',
+}
+
+const pfpStyle = {
+  width: '36px',
+  height: '36px',
+  borderRadius: '50%',
+  margin: '0 auto 8px auto',
+  display: 'block' as const,
+}
+
+const footerNameStyle = {
+  color: '#666666',
+  fontSize: '13px',
+  fontWeight: '500' as const,
+  letterSpacing: '-0.2px',
+  margin: '0 0 2px 0',
+  textAlign: 'center' as const,
+}
+
+const footerRoleStyle = {
+  color: '#999999',
+  fontSize: '12px',
+  fontWeight: '300' as const,
+  letterSpacing: '-0.2px',
+  margin: '0 0 16px 0',
+  textAlign: 'center' as const,
 }
 
 const footerTextStyle = {
@@ -71,7 +114,14 @@ export function EmailLayout({ children }: EmailLayoutProps) {
       <Head />
       <Body style={bodyStyle}>
         <Container style={containerStyle}>
-          <Text style={logoStyle}>MVR.</Text>
+          <Section style={headerStyle}>
+            <Img
+              src={`${BASE_URL}/icon-192.png`}
+              alt="MVR"
+              style={logoImgStyle}
+            />
+            <Text style={logoTextStyle}>MVR</Text>
+          </Section>
 
           <div style={cardStyle}>
             {children}
@@ -80,6 +130,14 @@ export function EmailLayout({ children }: EmailLayoutProps) {
           <Hr style={footerHrStyle} />
 
           <div style={footerStyle}>
+            <Img
+              src={`${BASE_URL}/cofounder-matthew.jpg`}
+              alt="Matthew"
+              style={pfpStyle}
+            />
+            <Text style={footerNameStyle}>Matthew</Text>
+            <Text style={footerRoleStyle}>Co-Founder, MVR</Text>
+
             <Text style={footerTextStyle}>
               <Link href="https://mvrfounding.com" style={footerLinkStyle}>
                 mvrfounding.com
