@@ -3,9 +3,57 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 
 const mockNames = [
-  "Sarah M.", "James T.", "Carlos R.", "Emily W.", "David K.",
-  "Rachel P.", "Marcus J.", "Lisa H.", "Anthony B.", "Jennifer C.",
-  "Michael S.", "Amanda L.", "Robert F.", "Nicole D.", "Christopher G.",
+  // Common American
+  "Sarah", "James", "Emily", "David", "Rachel",
+  "Marcus", "Lisa", "Anthony", "Jennifer", "Michael",
+  "Amanda", "Robert", "Nicole", "Chris", "Jessica",
+  "Brandon", "Olivia", "Derek", "Megan", "Jason",
+  "Brianna", "Tyler", "Kevin", "Stephanie", "Daniel",
+  "Lauren", "Ryan", "Jordan", "Heather", "Nathan",
+  "Christina", "Travis", "Dustin", "Erica", "Patrick",
+  "Amber", "Trevor", "Michelle", "Corey", "Natalie",
+  "Brian", "Samantha", "Aaron", "Holly", "Sean",
+  "Victor", "Angela", "Keith", "Diana", "Russell",
+  "Veronica", "Craig", "Grant", "Tiffany", "Wesley",
+  "Courtney", "Garrett", "Brooke", "Cameron", "Lindsey",
+  "Shane", "Elliott", "Paige", "Jared", "Shelby",
+  "Douglas", "Trent", "Isaiah", "Dominic", "Kristen",
+  "Taylor", "Morgan", "Alexis", "Austin", "Kayla",
+  "Hunter", "Savannah", "Colton", "Brittany", "Cody",
+  "Bailey", "Dalton", "Kelsey", "Blake", "Haley",
+  "Wyatt", "Mackenzie", "Tanner", "Sydney", "Bryce",
+  // Hispanic / Latino
+  "Carlos", "Maria", "Diego", "Gabriella", "Alejandro",
+  "Sofia", "Javier", "Valentina", "Luis", "Camila",
+  "Mateo", "Isabella", "Ricardo", "Daniela", "Fernando",
+  "Rosa", "Arturo", "Elena", "Rodrigo", "Adriana",
+  "Andres", "Catalina", "Hugo", "Mariana", "Rafael",
+  "Lucia", "Sergio", "Carmen", "Pablo", "Ana",
+  // African American
+  "Andre", "Jasmine", "Malik", "Bianca", "Desmond",
+  "Terrence", "Kendra", "Darius", "Aaliyah", "Cedric",
+  "Imani", "Lamar", "Keisha", "Tyrone", "Shanice",
+  "DeAndre", "Ebony", "Jamal", "Latoya", "Marquis",
+  "Tamika", "Reginald", "Alicia", "Donovan", "Monique",
+  "Xavier", "Janae", "Kendrick", "Tiana", "Dwayne",
+  // South Asian
+  "Priya", "Raj", "Ananya", "Arjun", "Deepa",
+  "Vikram", "Meera", "Rohan", "Kavita", "Nikhil",
+  "Sunita", "Amir", "Pooja", "Ravi", "Neha",
+  "Sanjay", "Anjali", "Pranav", "Divya", "Suresh",
+  // East Asian
+  "Wei", "Mei", "Jin", "Yuki", "Hiro",
+  "Suki", "Kai", "Mina", "Tao", "Linh",
+  "Hana", "Jun", "Yuna", "Kenji", "Aiko",
+  // Middle Eastern
+  "Omar", "Layla", "Hassan", "Fatima", "Tariq",
+  "Nadia", "Samir", "Yasmin", "Karim", "Amira",
+  // Nigerian / West African
+  "Chidi", "Nneka", "Emeka", "Adaeze", "Obiora",
+  "Folake", "Kwame", "Ama", "Kofi", "Ngozi",
+  // European
+  "Luca", "Freya", "Stefan", "Ingrid", "Matteo",
+  "Astrid", "Nikolai", "Greta", "Dimitri", "Katarina",
 ];
 
 const CHAR_SPEED = 40;
@@ -14,10 +62,10 @@ const PAUSE_AFTER_TYPE = 2000;
 const SLIDE_DURATION = 400;
 const STAGGER_DELAY = 1200;
 const TOAST_SLOT_HEIGHT = 56; // 48px toast + 8px gap
-const BURST_DELAY_MIN = 45000;
-const BURST_DELAY_MAX = 90000;
+const BURST_DELAY_MIN = 90000;
+const BURST_DELAY_MAX = 180000;
 
-const BURST_WEIGHTS = [0.85, 0.11, 0.03, 0.01];
+const BURST_WEIGHTS = [0.90, 0.08, 0.02, 0.00];
 
 function randomBetween(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -260,7 +308,7 @@ export function SocialProofToast() {
   useEffect(() => {
     scheduledRef.current = setTimeout(() => {
       scheduleBurst();
-    }, randomBetween(3000, 6000));
+    }, randomBetween(8000, 15000));
 
     return () => {
       if (scheduledRef.current) clearTimeout(scheduledRef.current);
