@@ -54,7 +54,7 @@ export function ContainerScroll({
       className="relative flex items-start justify-center"
       ref={containerRef}
       style={{
-        height: isMobile ? "60rem" : "70rem",
+        height: isMobile ? "53rem" : "70rem",
         perspective: "1000px",
       }}
     >
