@@ -29,12 +29,17 @@ export function ContainerScroll({
   }, []);
 
   const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [1.05, 1];
+    return isMobile ? [0.7, 1.0] : [1.05, 1];
   };
 
   const rotate = useTransform(scrollYProgress, [0, 0.8], [20, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.8], scaleDimensions());
   const translate = useTransform(scrollYProgress, [0, 0.8], [0, isMobile ? -50 : -100]);
+
+  const borderRadius = useTransform(scrollYProgress, [0, 0.8], isMobile ? [20, 0] : [30, 30]);
+  const innerBorderRadius = useTransform(scrollYProgress, [0, 0.8], isMobile ? [16, 0] : [16, 16]);
+  const borderWidth = useTransform(scrollYProgress, [0, 0.8], isMobile ? [2, 0] : [4, 4]);
+  const cardPadding = useTransform(scrollYProgress, [0, 0.8], isMobile ? [4, 0] : [24, 24]);
 
   return (
     <div
@@ -52,7 +57,15 @@ export function ContainerScroll({
         }}
       >
         <Header translate={translate} titleComponent={titleComponent} />
-        <Card rotate={rotate} translate={translate} scale={scale}>
+        <Card
+          rotate={rotate}
+          translate={translate}
+          scale={scale}
+          borderRadius={borderRadius}
+          innerBorderRadius={innerBorderRadius}
+          borderWidth={borderWidth}
+          cardPadding={cardPadding}
+        >
           {children}
         </Card>
       </div>
@@ -82,11 +95,19 @@ export function Header({
 export function Card({
   rotate,
   scale,
+  borderRadius,
+  innerBorderRadius,
+  borderWidth,
+  cardPadding,
   children,
 }: {
   rotate: MotionValue<number>;
   scale: MotionValue<number>;
   translate: MotionValue<number>;
+  borderRadius: MotionValue<number>;
+  innerBorderRadius: MotionValue<number>;
+  borderWidth: MotionValue<number>;
+  cardPadding: MotionValue<number>;
   children: React.ReactNode;
 }) {
   return (
@@ -94,14 +115,20 @@ export function Card({
       style={{
         rotateX: rotate,
         scale,
+        borderRadius,
+        borderWidth,
+        padding: cardPadding,
         boxShadow:
           "0 0 #00000000, 0 9px 20px #0000000a, 0 37px 37px #00000008, 0 84px 50px #00000005, 0 149px 60px #00000003, 0 233px 65px #00000001",
       }}
-      className="mx-auto -mt-12 aspect-video w-full max-w-5xl rounded-[20px] border-2 border-[#6C6C6C] bg-[#222222] p-1 md:aspect-auto md:h-[40rem] md:rounded-[30px] md:border-4 md:p-6"
+      className="mx-auto -mt-12 aspect-video w-full max-w-5xl border-solid border-[#6C6C6C] bg-[#222222] md:aspect-auto md:h-[40rem]"
     >
-      <div className="h-full w-full overflow-hidden rounded-2xl bg-gray-100 md:rounded-2xl">
+      <motion.div
+        style={{ borderRadius: innerBorderRadius }}
+        className="h-full w-full overflow-hidden bg-gray-100"
+      >
         {children}
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

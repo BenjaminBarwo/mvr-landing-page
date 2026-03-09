@@ -6,6 +6,14 @@ export function AppShowcase() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [hasVideo, setHasVideo] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   useEffect(() => {
     fetch("/mvr-demo.mp4", { method: "HEAD" })
@@ -51,7 +59,7 @@ export function AppShowcase() {
                 width: "100%",
                 height: "100%",
                 display: "block",
-                objectFit: "contain",
+                objectFit: isMobile ? "cover" : "contain",
               }}
             />
 
