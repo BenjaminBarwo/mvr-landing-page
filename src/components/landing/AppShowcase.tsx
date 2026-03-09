@@ -51,12 +51,12 @@ export function AppShowcase() {
                 width: "100%",
                 height: "100%",
                 display: "block",
-                objectFit: "cover",
+                objectFit: "contain",
               }}
             />
 
             {/* Mute/Unmute button */}
-            <div style={{ position: "absolute", bottom: 16, right: 16 }}>
+            <div style={{ position: "absolute", bottom: 16, right: 16, zIndex: 10 }}>
               <span
                 style={{
                   animation: "mutePulse 1.5s ease-out infinite",
@@ -64,6 +64,7 @@ export function AppShowcase() {
                   borderRadius: "50%",
                   position: "absolute",
                   zIndex: 0,
+                  pointerEvents: "none",
                   bottom: 0,
                   right: 0,
                   left: 0,

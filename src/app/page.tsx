@@ -33,14 +33,16 @@ export default function Home() {
         >
           <AppShowcase />
         </ContainerScroll>
-        <FeaturesStrip />
-        <hr style={{ width: 200, border: "none", borderTop: "1px solid #e0e0e0", margin: "0 auto" }} />
-        <CompetitorContrast />
-        <hr style={{ width: 200, border: "none", borderTop: "1px solid #e0e0e0", margin: "0 auto" }} />
-        <CoFounderCard />
-        <hr style={{ width: 200, border: "none", borderTop: "1px solid #e0e0e0", margin: "0 auto" }} />
-        <BottomCTA onOpenWaitlist={() => setIsWaitlistOpen(true)} />
-        <Footer />
+        <div style={{ position: "relative", zIndex: 1, background: "#f2f3f5", paddingTop: 60 }}>
+          <FeaturesStrip />
+          <hr style={{ width: 200, border: "none", borderTop: "1px solid #e0e0e0", margin: "0 auto" }} />
+          <CompetitorContrast />
+          <hr style={{ width: 200, border: "none", borderTop: "1px solid #e0e0e0", margin: "0 auto" }} />
+          <CoFounderCard />
+          <hr style={{ width: 200, border: "none", borderTop: "1px solid #e0e0e0", margin: "0 auto" }} />
+          <BottomCTA onOpenWaitlist={() => setIsWaitlistOpen(true)} />
+          <Footer />
+        </div>
       </div>
       <WaitlistModal
         isOpen={isWaitlistOpen}

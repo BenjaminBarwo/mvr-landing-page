@@ -11,10 +11,11 @@ export function ContainerScroll({
   children: React.ReactNode;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = React.useState(false);
   const { scrollYProgress } = useScroll({
     target: containerRef,
+    offset: isMobile ? ["start start", "end start"] : undefined,
   });
-  const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
     const checkMobile = () => {
@@ -33,14 +34,14 @@ export function ContainerScroll({
 
   const rotate = useTransform(scrollYProgress, [0, 0.8], [20, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.8], scaleDimensions());
-  const translate = useTransform(scrollYProgress, [0, 0.8], [0, -100]);
+  const translate = useTransform(scrollYProgress, [0, 0.8], [0, isMobile ? -50 : -100]);
 
   return (
     <div
       className="relative flex items-start justify-center"
       ref={containerRef}
       style={{
-        height: "60rem",
+        height: isMobile ? "50rem" : "70rem",
         perspective: "1000px",
       }}
     >
@@ -96,7 +97,7 @@ export function Card({
         boxShadow:
           "0 0 #00000000, 0 9px 20px #0000000a, 0 37px 37px #00000008, 0 84px 50px #00000005, 0 149px 60px #00000003, 0 233px 65px #00000001",
       }}
-      className="mx-auto -mt-12 h-[30rem] w-full max-w-5xl rounded-[30px] border-4 border-[#6C6C6C] bg-[#222222] p-2 md:h-[40rem] md:p-6"
+      className="mx-auto -mt-12 aspect-video w-full max-w-5xl rounded-[20px] border-2 border-[#6C6C6C] bg-[#222222] p-1 md:aspect-auto md:h-[40rem] md:rounded-[30px] md:border-4 md:p-6"
     >
       <div className="h-full w-full overflow-hidden rounded-2xl bg-gray-100 md:rounded-2xl">
         {children}
