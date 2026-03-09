@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { useScroll, useTransform, motion, MotionValue } from "motion/react";
+import { useScroll, useTransform, useSpring, motion, MotionValue } from "motion/react";
 
 export function ContainerScroll({
   titleComponent,
@@ -28,25 +28,33 @@ export function ContainerScroll({
     };
   }, []);
 
+  // Smooth out jerky touch scroll input
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   const scaleDimensions = () => {
     return isMobile ? [0.7, 1.0] : [1.05, 1];
   };
 
-  const rotate = useTransform(scrollYProgress, [0, 0.8], [20, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], scaleDimensions());
-  const translate = useTransform(scrollYProgress, [0, 0.8], [0, isMobile ? -50 : -100]);
+  // Stagger: rotation settles first (0.65), then scale (0.85), translate spans full range (0.9)
+  const rotate = useTransform(smoothProgress, [0, 0.65], [14, 0]);
+  const scale = useTransform(smoothProgress, [0, 0.85], scaleDimensions());
+  const translate = useTransform(smoothProgress, [0, 0.9], [0, isMobile ? -50 : -100]);
 
-  const borderRadius = useTransform(scrollYProgress, [0, 0.8], isMobile ? [20, 0] : [30, 30]);
-  const innerBorderRadius = useTransform(scrollYProgress, [0, 0.8], isMobile ? [16, 0] : [16, 16]);
-  const borderWidth = useTransform(scrollYProgress, [0, 0.8], isMobile ? [2, 0] : [4, 4]);
-  const cardPadding = useTransform(scrollYProgress, [0, 0.8], isMobile ? [4, 0] : [24, 24]);
+  const borderRadius = useTransform(smoothProgress, [0, 0.9], isMobile ? [20, 20] : [30, 30]);
+  const innerBorderRadius = useTransform(smoothProgress, [0, 0.9], isMobile ? [16, 16] : [16, 16]);
+  const borderWidth = useTransform(smoothProgress, [0, 0.9], isMobile ? [2, 2] : [4, 4]);
+  const cardPadding = useTransform(smoothProgress, [0, 0.9], isMobile ? [4, 4] : [24, 24]);
 
   return (
     <div
       className="relative flex items-start justify-center"
       ref={containerRef}
       style={{
-        height: isMobile ? "50rem" : "70rem",
+        height: isMobile ? "60rem" : "70rem",
         perspective: "1000px",
       }}
     >
